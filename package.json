@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kyle-a-lu/Portfolio/issues"
   },
-  "homepage": "https://github.com/kyle-a-lu/Portfolio#readme"
+  "homepage": "https://github.com/kyle-a-lu/Portfolio#readme",
+  "dependencies": {
+    "sass": "^1.90.0"
+  }
 }
