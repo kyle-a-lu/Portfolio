@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Kyle Lu - WebDev Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyle-a-lu/Portfolio.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Kyle Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyle-a-lu/Portfolio/issues"
+  },
+  "homepage": "https://github.com/kyle-a-lu/Portfolio#readme"
+}
