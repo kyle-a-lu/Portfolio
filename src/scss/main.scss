@@ -1,2 +1,4 @@
-@use 'components/_components.scss';
-@use 'base/_base.scss';
+/* This file imports all SCSS partials and compiles them into styles.css */
+
+@use 'base';
+@use 'components';

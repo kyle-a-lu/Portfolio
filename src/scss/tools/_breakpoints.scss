@@ -1,0 +1,21 @@
+/* Breakpoints */
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin media-up ($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $xl) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: $xxl) { @content; }
+  }
+}

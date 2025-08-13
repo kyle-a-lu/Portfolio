@@ -1,1 +1,22 @@
+@use '../tools/' as *;
+
 /* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    nav {
+        height: 100%;
+        width: 33%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: steelblue;
+        ul {
+            list-style: none;
+        }
+    }
+    .header-content{
+        width: 66%;
+    }
+}
