@@ -1,5 +1,5 @@
 /* This file imports all SCSS partials and compiles them into styles.css */
-/* Globals */
+/* Base */
 body {
   margin: 0 10%;
 }
@@ -20,31 +20,7 @@ h2 {
 /* Mixins */
 /* Button */
 /* Header */
-header {
-  display: flex;
-  flex-direction: row;
-}
-header nav {
-  height: 100%;
-  width: 33%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: steelblue;
-}
-header nav ul {
-  list-style: none;
-}
-header .header-content {
-  width: 66%;
-}
-
 /* Footer */
-@media (min-width: 992px) {
-  nav ul {
-    display: flex;
-    flex-direction: row;
-  }
-}
+/* Navigation */
 
 /*# sourceMappingURL=style.css.map */
