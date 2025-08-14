@@ -14,17 +14,19 @@ body {
   font-family: "Varela Round", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #ff8e00;
+  color: #ffffff;
 }
 
 h1 {
   font-size: 4rem;
   margin-bottom: 0.25rem;
+  color: #ff8e00;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-top: 0.25rem;
+  color: #ff8e00;
 }
 
 nav a {
@@ -46,6 +48,15 @@ nav a:hover {
 
 /* Button */
 /* Header */
+.avatar-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
 /* Footer */
 /* Navigation */
 nav {
@@ -83,15 +94,7 @@ nav ul li {
   gap: 0.5rem;
 }
 
-.avatar-image {
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
-}
-
+/* About Section */
 .about-image {
   width: 100%;
   height: auto;
@@ -101,24 +104,7 @@ nav ul li {
   border-radius: 20%;
 }
 
-.skills-image {
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
-}
-
-.experience-image {
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
-}
-
+/* Clearance Section */
 .clearance-image {
   width: 100%;
   height: auto;
@@ -128,6 +114,23 @@ nav ul li {
   border-radius: 20%;
 }
 
+/* Contact Section */
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Expereience Section */
+.experience-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+/* Projects Section */
 .projects-image {
   width: 100%;
   height: auto;
@@ -137,9 +140,14 @@ nav ul li {
   border-radius: 20%;
 }
 
-.contact-icon {
-  width: 2rem;
-  height: 2rem;
+/* Skills Section */
+.skills-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */
