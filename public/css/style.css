@@ -2,6 +2,33 @@
 /* Breakpoints */
 /* Colors */
 /* Mixins */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes enlargeButton {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(-16px);
+    transform: scale(2);
+  }
+}
 /* Base */
 body {
   margin: 0 10%;
@@ -31,23 +58,28 @@ h2 {
 
 nav a {
   font-size: 0.8rem;
-  color: #003f7d;
+  color: #ffffff;
   font-weight: bold;
 }
 nav a:hover {
   color: #ffffff;
 }
 
-.contact a {
+.contact-section a {
   color: #fd7702;
   font-weight: bold;
 }
-.contact a:hover {
+.contact-section a:hover {
   color: #ffffff;
 }
 
 /* Button */
 /* Header */
+.header-content {
+  animation: fadeIn 5s;
+  animation: slideInLeft 5s;
+}
+
 .avatar-image {
   width: 100%;
   height: auto;
@@ -78,23 +110,11 @@ nav ul li {
   list-style: none;
 }
 
-.contact ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding-left: 0;
-}
-.contact ul li {
-  margin: 0.25rem;
-  list-style: none;
-}
-.contact ul a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+/* About Section */
+.about-section {
+  animation: slideInRight 5s;
 }
 
-/* About Section */
 .about-image {
   width: 100%;
   height: auto;
@@ -105,6 +125,10 @@ nav ul li {
 }
 
 /* Clearance Section */
+.clearance-section {
+  animation: slideInRight 5s;
+}
+
 .clearance-image {
   width: 100%;
   height: auto;
@@ -115,12 +139,44 @@ nav ul li {
 }
 
 /* Contact Section */
-.contact-icon {
+.contact-section {
+  animation: slideInRight 5s;
+}
+.contact-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+.contact-section ul li {
+  margin: 0.25rem;
+  list-style: none;
+  transition: all ease-in-out 1s;
+}
+.contact-section ul li:hover {
+  transform: scale(1.5);
+}
+.contact-section ul a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contact-section ul a .contact-icon {
   width: 2rem;
   height: 2rem;
 }
 
 /* Expereience Section */
+.experience-section .experience-header {
+  animation: slideInLeft 5s;
+}
+.experience-section .experience-1 {
+  animation: slideInRight 5s;
+}
+.experience-section .experience-2 {
+  animation: slideInLeft 5s;
+}
+
 .experience-image {
   width: 100%;
   height: auto;
@@ -131,6 +187,10 @@ nav ul li {
 }
 
 /* Projects Section */
+.projects-section {
+  animation: slideInLeft 5s;
+}
+
 .projects-image {
   width: 100%;
   height: auto;
@@ -141,6 +201,10 @@ nav ul li {
 }
 
 /* Skills Section */
+.skills-section {
+  animation: slideInLeft 5s;
+}
+
 .skills-image {
   width: 100%;
   height: auto;

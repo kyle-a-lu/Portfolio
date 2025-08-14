@@ -1,6 +1,9 @@
 @use '../tools/' as *;
 
 /* Projects Section */
+.projects-section {
+  animation: slideInLeft 5s;
+}
 
 .projects-image {
   width: 100%;

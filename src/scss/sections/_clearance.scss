@@ -1,7 +1,9 @@
 @use '../tools/' as *;
 
 /* Clearance Section */
-
+.clearance-section {
+  animation: slideInRight 5s;
+}
 .clearance-image {
   width: 100%;
   height: auto;

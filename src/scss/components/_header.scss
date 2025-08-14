@@ -2,6 +2,11 @@
 
 /* Header */
 
+.header-content {
+  animation: fadeIn 5s;
+  animation: slideInLeft 5s;
+}
+
 .avatar-image {
   width: 100%;
   height: auto;

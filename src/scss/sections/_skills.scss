@@ -1,7 +1,9 @@
 @use '../tools/' as *;
 
 /* Skills Section */
-
+.skills-section {
+  animation: slideInLeft 5s;
+}
 .skills-image {
   width: 100%;
   height: auto;

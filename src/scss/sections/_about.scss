@@ -1,7 +1,9 @@
 @use '../tools/' as *;
 
 /* About Section */
-
+.about-section {
+  animation: slideInRight 5s;
+}
 .about-image {
   width: 100%;
   height: auto;

@@ -1,6 +1,17 @@
 @use '../tools/' as *;
 
 /* Expereience Section */
+.experience-section {
+  .experience-header {
+    animation: slideInLeft 5s;
+  }
+  .experience-1 {
+    animation: slideInRight 5s;
+  }
+  .experience-2 {
+    animation: slideInLeft 5s;
+  }
+}
 
 .experience-image {
   width: 100%;

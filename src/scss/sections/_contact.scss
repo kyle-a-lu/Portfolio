@@ -1,8 +1,29 @@
 @use '../tools/' as *;
 
 /* Contact Section */
-
-.contact-icon {
-  width: 2rem;
-  height: 2rem;
+.contact-section {
+  animation: slideInRight 5s;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+    li {
+      margin: 0.25rem;
+      list-style: none;
+      transition: all ease-in-out 1s;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      .contact-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
 }
