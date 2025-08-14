@@ -1,5 +1,9 @@
+@use '../tools/' as *;
+
 /* Base */
 
 body {
   margin: 0 10%;
+  padding-bottom: 15%;
+  background-color: $background-color;
 }

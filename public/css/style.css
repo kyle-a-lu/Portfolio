@@ -1,10 +1,22 @@
 /* This file imports all SCSS partials and compiles them into styles.css */
+/* Breakpoints */
+/* Colors */
+/* Mixins */
 /* Base */
 body {
   margin: 0 10%;
+  padding-bottom: 15%;
+  background-color: #002347;
 }
 
 /* Typography */
+body {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff8e00;
+}
+
 h1 {
   font-size: 4rem;
   margin-bottom: 0.25rem;
@@ -15,12 +27,119 @@ h2 {
   margin-top: 0.25rem;
 }
 
-/* Breakpoints */
-/* Colors */
-/* Mixins */
+nav a {
+  font-size: 0.8rem;
+  color: #003f7d;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ffffff;
+}
+
+.contact a {
+  color: #fd7702;
+  font-weight: bold;
+}
+.contact a:hover {
+  color: #ffffff;
+}
+
 /* Button */
 /* Header */
 /* Footer */
 /* Navigation */
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #fd7702;
+  height: 3.5rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+nav ul li {
+  margin: 0.25rem;
+  list-style: none;
+}
+
+.contact ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+.contact ul li {
+  margin: 0.25rem;
+  list-style: none;
+}
+.contact ul a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.skills-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.experience-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.clearance-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.projects-image {
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20%;
+}
+
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */

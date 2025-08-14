@@ -5,36 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyle Lu</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
   </head>
 
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#about" aria-label="About">About</a></li>
-          <li><a href="#skills" aria-label="Skills">Skills</a></li>
           <li><a href="#contact" aria-label="Contact">Contact</a></li>
-          <li><a href="#education" aria-label="Education">Education</a></li>
+          <li><a href="#about" aria-label="About">About</a></li>
           <li><a href="#experience" aria-label="Experience">Experience</a></li>
+          <li><a href="#skills" aria-label="Skills">Skills</a></li>
+          <li><a href="#clearance" aria-label="Skills">Clearance</a></li>
           <li><a href="#projects" aria-label="Projects">Projects</a></li>
         </ul>
       </nav>
       <div class="header-content">
         <h1>Kyle Lu</h1>
         <h2>Software Engineer</h2>
+        <img class="avatar-image" src="../public/assets/avatar.png" alt="Avatar" />
       </div>
     </header>
 
     <main>
-      <div class="contact">
+      <div class="contact" id="contact">
         <h3>Contact Me!</h3>
-        <p><a href="tel:240-342-1527">Phone</a></p>
-        <p><a href="mailto:Lu.Kyle.A@gmail.com">Email</a></p>
-        <p><a href="https://github.com/kyle-a-lu">GitHub</a></p>
-        <p><a href="https://www.linkedin.com/in/kyle-a-lu/">LinkedIn</a></p>
+        <ul>
+          <li>
+            <a href="tel:240-342-1527">
+              <img class="contact-icon" src="../public/assets/contact-icons/telephone.png" alt="Phone Icon" />
+              Phone
+            </a>
+          </li>
+          <li>
+            <a href="mailto:Lu.Kyle.A@gmail.com">
+              <img class="contact-icon" src="../public/assets/contact-icons/gmail.png" alt="Gmail Icon" />
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/kyle-a-lu">
+              <img class="contact-icon" src="../public/assets/contact-icons/github.png" alt="GitHub Icon" />
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/kyle-a-lu/">
+              <img class="contact-icon" src="../public/assets/contact-icons/linkedin.png" alt="LinkedIn Icon" />
+              LinkedIn
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="about">
+      <div class="about" id="about">
         <h2>About</h2>
+        <img class="about-image" src="../public/assets/about.png" alt="Book" />
         <p>
           I am an experienced front-end developer who enjoys turning ideas into responsive and accessible web applications using JavaScript, SASS, and PHP. I'm passionate about creating smooth,
           user-friendly experiences and take pride in building custom plugins and modules for WordPress and Drupal when additional functionality is needed. I thrive in small team environments where
@@ -43,8 +70,9 @@
           and users.
         </p>
       </div>
-      <div class="experience">
+      <div class="experience" id="experience">
         <h2>Experience</h2>
+        <img class="experience-image" src="../public/assets/experience.png" alt="Experience Bar" />
         <p>Software Engineer</p>
         <p>Company: IQ Solutions</p>
         <p>Employment Type: Full-time</p>
@@ -85,8 +113,9 @@
           <li>Perform code reviews to uphold group coding standards and emphasize clean, well-documented code</li>
         </ul>
       </div>
-      <div class="skills">
+      <div class="skills" id="skills">
         <h2>Skills</h2>
+        <img class="skills-image" src="../public/assets/skills.png" alt="Skills Icon" />
         <p>Technical Skills:</p>
         <ul>
           <li>Front-end development with HTML5, CSS3, SCSS, JavaScript, and Bootstrap</li>
@@ -119,6 +148,14 @@
           <li>Consistent delivery of high-quality solutions</li>
           <li>Proactive in improving accessibility and usability</li>
         </ul>
+      </div>
+      <div class="clearance" id="clearance">
+        <h2>Clearance</h2>
+        <img class="clearance-image" src="../public/assets/clearance.png" alt="Clearance Icon" />
+        <p>Public Trust</p>
+      </div>
+      <div>
+        <img class="projects-image" src="../public/assets/projects.png" alt="Projects Icon" />
       </div>
     </main>
     <footer>Footer</footer>
