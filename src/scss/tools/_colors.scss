@@ -1,11 +1,16 @@
 /* Colors */
 
-$white: #ffffff; // White
-$black: #000000; // Black
 $background-color: #002347; // Midnight Blue
 $secondary-color: #003366; // Navy Blue
 $accent-color: #003f7d; // Deep Blue
-$text-color: #ff8e00; // Bright Orange
 $highlight-color: #fd7702; // Orange
 $border-color: #ff5003; // Red-Orange
 $link-color: $accent-color;
+$placeholder-color: #999999; // Gray
+
+$header-color: #b47846; // White
+$white: #ffffff; // White
+$text-color: $white; // White
+$black: #000000; // Black
+$button-color: #4682b4; // Steel Blue
+$button-color-hover: #36638a; // Darker Steel Blue

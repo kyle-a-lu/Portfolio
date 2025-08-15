@@ -6,19 +6,19 @@ body {
   font-family: 'Varela Round', sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: $white;
+  color: $text-color;
 }
 
 h1 {
   font-size: 4rem;
   margin-bottom: 0.25rem;
-  color: $text-color;
+  color: $header-color;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-top: 0.25rem;
-  color: $text-color;
+  color: $header-color;
 }
 
 nav {
@@ -27,7 +27,7 @@ nav {
     color: $secondary-color;
     font-weight: bold;
     &:hover {
-      color: $white;
+      color: $text-color;
     }
   }
 }
@@ -37,7 +37,7 @@ nav {
     color: $highlight-color;
     font-weight: bold;
     &:hover {
-      color: $white;
+      color: $text-color;
     }
   }
 }
