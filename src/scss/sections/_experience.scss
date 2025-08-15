@@ -2,14 +2,14 @@
 
 /* Expereience Section */
 .experience-section {
-  .experience-header {
-    animation: slideInLeft 5s;
-  }
+  // .experience-header {
+  animation: slideInRight 5s;
+  // }
   .experience-1 {
-    animation: slideInRight 5s;
+    animation: slideInLeft 5s;
   }
   .experience-2 {
-    animation: slideInLeft 5s;
+    animation: slideInRight 5s;
   }
 }
 

@@ -2,12 +2,21 @@
 /* Breakpoints */
 /* Colors */
 /* Mixins */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slideInLeft {
   0% {
     opacity: 0;
     transform: translateX(-500px);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -17,21 +26,13 @@
     transform: translateX(500px);
   }
   100% {
+    opacity: 1;
     transform: translateX(0);
-  }
-}
-@keyframes enlargeButton {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: translateY(-16px);
-    transform: scale(2);
   }
 }
 /* Base */
 body {
-  margin: 0 10%;
+  margin: 10% 10%;
   padding-bottom: 15%;
   background-color: #002347;
 }
@@ -73,10 +74,8 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* Button */
 /* Header */
 .header-content {
-  animation: fadeIn 5s;
   animation: slideInLeft 5s;
 }
 
@@ -90,6 +89,17 @@ nav a:hover {
 }
 
 /* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.heart-icon {
+  width: 1rem;
+  height: auto;
+  vertical-align: middle;
+}
+
 /* Navigation */
 nav {
   position: fixed;
@@ -99,20 +109,35 @@ nav {
   z-index: 1000;
   background-color: #fd7702;
   height: 3.5rem;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+@media (min-width: 768px) {
+  nav {
+    top: 0;
+    bottom: unset;
+  }
 }
 nav ul {
   display: flex;
   justify-content: space-evenly;
   padding-left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 nav ul li {
+  padding: 1rem 0;
   margin: 0.25rem;
   list-style: none;
+}
+nav ul li a {
+  width: 100%;
+  height: 100%;
 }
 
 /* About Section */
 .about-section {
-  animation: slideInRight 5s;
+  animation: slideInLeft 5s;
 }
 
 .about-image {
@@ -142,6 +167,14 @@ nav ul li {
 .contact-section {
   animation: slideInRight 5s;
 }
+.contact-section h3 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact-section h3 {
+    display: block;
+  }
+}
 .contact-section ul {
   display: flex;
   justify-content: space-evenly;
@@ -167,14 +200,14 @@ nav ul li {
 }
 
 /* Expereience Section */
-.experience-section .experience-header {
-  animation: slideInLeft 5s;
-}
-.experience-section .experience-1 {
+.experience-section {
   animation: slideInRight 5s;
 }
-.experience-section .experience-2 {
+.experience-section .experience-1 {
   animation: slideInLeft 5s;
+}
+.experience-section .experience-2 {
+  animation: slideInRight 5s;
 }
 
 .experience-image {

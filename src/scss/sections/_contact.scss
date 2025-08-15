@@ -3,6 +3,12 @@
 /* Contact Section */
 .contact-section {
   animation: slideInRight 5s;
+  h3 {
+    display: none;
+    @include media-above($md) {
+      display: block;
+    }
+  }
   ul {
     display: flex;
     justify-content: space-evenly;
