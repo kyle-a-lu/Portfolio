@@ -4,13 +4,8 @@
 
 .header-content {
   animation: slideInLeft 5s;
-}
-
-.avatar-image {
-  width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+  @include media-above($md) {
+    width: 50%;
+    display: inline-block;
+  }
 }

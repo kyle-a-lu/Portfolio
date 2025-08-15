@@ -2,14 +2,30 @@
 
 /* Projects Section */
 .projects-section {
-  animation: slideInLeft 5s;
-}
-
-.projects-image {
   width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+  animation: slideInRight 5s;
+  @include media-above($md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .projects-image-container {
+    @include media-above($md) {
+      width: 50%;
+    }
+    .projects-image {
+      width: 100%;
+      height: auto;
+      max-width: 375px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 20%;
+    }
+  }
+  .projects-content-container {
+    @include media-above($md) {
+      width: 50%;
+    }
+  }
 }

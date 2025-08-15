@@ -2,13 +2,33 @@
 
 /* About Section */
 .about-section {
-  animation: slideInLeft 5s;
-}
-.about-image {
   width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+  animation: slideInLeft 5s;
+  @include media-above($md) {
+    animation: slideInRight 5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  .about-container {
+    @include media-above($md) {
+      width: 50%;
+      order: 2;
+    }
+    .about-image {
+      height: auto;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 375px;
+      display: block;
+      border-radius: 20%;
+    }
+  }
+  .about-content {
+    @include media-above($md) {
+      width: 50%;
+      order: 1;
+    }
+  }
 }

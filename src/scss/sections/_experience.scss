@@ -1,23 +1,42 @@
 @use '../tools/' as *;
 
 /* Expereience Section */
-.experience-section {
-  // .experience-header {
-  animation: slideInRight 5s;
-  // }
-  .experience-1 {
-    animation: slideInLeft 5s;
-  }
-  .experience-2 {
-    animation: slideInRight 5s;
-  }
-}
 
-.experience-image {
+.experience-section {
   width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+  animation: slideInLeft 5s;
+  .experience-image-container {
+    @include media-above($md) {
+      width: 100%;
+    }
+    .experience-image {
+      width: 100%;
+      height: auto;
+      max-width: 375px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 20%;
+    }
+  }
+  .experience-content-container {
+    @include media-above($md) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  .experience-content-1 {
+    animation: slideInLeft 5s;
+    @include media-above($md) {
+      width: 50%;
+      animation: none;
+    }
+  }
+  .experience-content-2 {
+    animation: slideInRight 5s;
+    @include media-above($md) {
+      width: 50%;
+      animation: none;
+    }
+  }
 }

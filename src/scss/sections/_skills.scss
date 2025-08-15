@@ -2,13 +2,68 @@
 
 /* Skills Section */
 .skills-section {
-  animation: slideInLeft 5s;
-}
-.skills-image {
   width: 100%;
-  height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+  animation: slideInLeft 5s;
+  @include media-above($md) {
+    animation: slideInRight 5s;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .skills-image-container {
+    @include media-above($md) {
+      width: 100%;
+    }
+    .skills-image {
+      height: auto;
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 20%;
+    }
+  }
+  .technical-skills-container {
+    @include media-above($md) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .skills-content-1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @include media-above($md) {
+        width: 50%;
+      }
+      .tools-icon {
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+      }
+    }
+    .skills-content-2 {
+      @include media-above($md) {
+        width: 50%;
+      }
+    }
+  }
+  .soft-skills-container {
+    @include media-above($md) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .skills-content-3 {
+      @include media-above($md) {
+        width: 50%;
+      }
+    }
+    .skills-content-4 {
+      @include media-above($md) {
+        width: 50%;
+      }
+    }
+  }
 }

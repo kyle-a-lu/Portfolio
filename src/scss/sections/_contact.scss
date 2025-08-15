@@ -2,33 +2,60 @@
 
 /* Contact Section */
 .contact-section {
-  animation: slideInRight 5s;
-  h3 {
-    display: none;
+  width: 100%;
+  @include media-above($md) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    animation: slideInLeft 5s;
+  }
+  .avatar-container {
     @include media-above($md) {
+      width: 50%;
+    }
+    .avatar-image {
+      height: auto;
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto;
       display: block;
+      border-radius: 20%;
     }
   }
-  ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 0;
-    li {
-      margin: 0.25rem;
-      list-style: none;
-      transition: all ease-in-out 1s;
-      &:hover {
-        transform: scale(1.5);
+  .contact-content {
+    h3 {
+      display: none;
+      @include media-above($md) {
+        display: block;
+        text-align: center;
       }
     }
-    a {
+    ul {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      .contact-icon {
-        width: 2rem;
-        height: 2rem;
+      flex-direction: row;
+      flex: wrap;
+      justify-content: space-evenly;
+      padding-left: 0;
+      @include media-above($md) {
+        gap: 1rem;
+      }
+      li {
+        margin: 0.25rem;
+        list-style: none;
+        transition: all ease-in-out 1s;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        .contact-icon {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
   }

@@ -7,3 +7,15 @@ body {
   padding-bottom: 15%;
   background-color: $background-color;
 }
+
+main {
+  @include media-above($md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+section {
+  padding-bottom: 4rem;
+}
