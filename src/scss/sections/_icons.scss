@@ -1,0 +1,14 @@
+@use '../tools/' as *;
+
+/* Icons Section */
+
+.icons-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .tools-icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+  }
+}

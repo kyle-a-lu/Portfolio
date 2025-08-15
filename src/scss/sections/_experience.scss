@@ -3,7 +3,6 @@
 /* Expereience Section */
 
 .experience-section {
-  width: 100%;
   animation: slideInLeft 5s;
   @include media-above($md) {
     display: flex;

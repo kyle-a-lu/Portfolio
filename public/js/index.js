@@ -4,30 +4,15 @@
 const accordions = document.querySelectorAll('.accordion');
 
 accordions.forEach(accordion => {
+    const header = accordion.querySelector('.accordion-header');
+    const content = accordion.querySelector('.accordion-content');
+    const icon = accordion.querySelector('.accordion-icon');
     
         accordion.addEventListener('click', () => {
-            const isActive = accordion.classList.contains('is-open');
-
-            if (isActive) {
-                accordion.classList.remove('is-open');
-                accordion.classList.add('is-closed');
-            } else {
-                accordion.classList.remove('is-closed');
-                accordion.classList.add('is-open');
-            }
-
-            const accordionParts = accordion.querySelectorAll('.accordion-header, .accordion-content, .accordion-icon');
-            
-            accordionParts.forEach(part => {
-                if (part.classList.contains('is-open')) {
-                    part.classList.remove('is-open');
-                    part.classList.add('is-closed');
-                }
-                else {
-                    part.classList.remove('is-closed');
-                    part.classList.add('is-open');
-                }
-            });
+            accordion.classList.toggle('active');
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+            icon.classList.toggle('active');
         });
     }
 );

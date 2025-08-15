@@ -2,18 +2,17 @@
 
 /* Skills Section */
 .skills-section {
-  width: 100%;
   animation: slideInLeft 5s;
   @include media-above($md) {
     animation: slideInRight 5s;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1rem;
   }
   .skills-image-container {
     @include media-above($md) {
-      width: 100%;
+      width: 50%;
+      order: 2;
     }
     .skills-image {
       height: auto;
@@ -24,46 +23,12 @@
       border-radius: 20%;
     }
   }
-  .technical-skills-container {
+  .skills-container {
     @include media-above($md) {
       display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-    .skills-content-1 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      @include media-above($md) {
-        width: 50%;
-      }
-      .tools-icon {
-        width: 4rem;
-        height: 4rem;
-        padding: 1rem;
-      }
-    }
-    .skills-content-2 {
-      @include media-above($md) {
-        width: 50%;
-      }
-    }
-  }
-  .soft-skills-container {
-    @include media-above($md) {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-    }
-    .skills-content-3 {
-      @include media-above($md) {
-        width: 50%;
-      }
-    }
-    .skills-content-4 {
-      @include media-above($md) {
-        width: 50%;
-      }
+      width: 50%;
+      flex-direction: column;
+      order: 1;
     }
   }
 }

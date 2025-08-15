@@ -2,7 +2,6 @@
 
 /* Projects Section */
 .projects-section {
-  width: 100%;
   animation: slideInRight 5s;
   @include media-above($md) {
     display: flex;

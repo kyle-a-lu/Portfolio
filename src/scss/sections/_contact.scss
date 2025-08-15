@@ -2,11 +2,10 @@
 
 /* Contact Section */
 .contact-section {
-  width: 100%;
   @include media-above($md) {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     animation: slideInLeft 5s;
   }
   .avatar-container {
@@ -23,9 +22,17 @@
     }
   }
   .contact-content {
+    @include media-above($md) {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     h3 {
       display: none;
       @include media-above($md) {
+        width: 50%;
         display: block;
         text-align: center;
       }
@@ -38,6 +45,7 @@
       padding-left: 0;
       @include media-above($md) {
         gap: 1rem;
+        width: 50%;
       }
       li {
         margin: 0.25rem;

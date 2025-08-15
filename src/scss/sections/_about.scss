@@ -2,14 +2,12 @@
 
 /* About Section */
 .about-section {
-  width: 100%;
   animation: slideInLeft 5s;
   @include media-above($md) {
     animation: slideInRight 5s;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 2rem;
   }
   .about-container {
     @include media-above($md) {

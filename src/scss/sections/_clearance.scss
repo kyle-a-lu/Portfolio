@@ -2,14 +2,12 @@
 
 /* Clearance Section */
 .clearance-section {
-  width: 100%;
   animation: slideInRight 5s;
   @include media-above($md) {
     animation: slideInLeft 5s;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
   }
   .clearance-image-container {
     @include media-above($md) {
