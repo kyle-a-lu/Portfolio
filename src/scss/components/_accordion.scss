@@ -17,7 +17,7 @@
     justify-content: space-between;
     border-radius: 20px;
     .accordion-icon {
-      transition: transform 0.5s ease-in-out;
+      transition: transform 1s ease-in-out;
       content: url(../../../public/assets/arrow-down.png);
       width: 2rem;
       height: 2rem;
@@ -32,7 +32,7 @@
     border-radius: 0 0 20px 20px;
     padding: 0 1rem;
     opacity: 0;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
     &.active {
       opacity: 1;
       max-height: 1000px;
