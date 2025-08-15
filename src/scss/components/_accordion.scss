@@ -1,0 +1,61 @@
+@use '../tools/' as *;
+
+// Accordions
+.accordion {
+  margin: 2rem 0;
+  &:hover {
+    cursor: pointer;
+  }
+  .accordion-header {
+    margin: auto 0;
+    padding: 1rem;
+    background-color: $button-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    &:hover {
+      background-color: $button-color-hover;
+    }
+    &.is-closed {
+      transition-property: border-radius;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      transition-delay: 0.25s;
+    }
+    &.is-open {
+      transition-property: border-radius;
+      transition-duration: 0.25s;
+      transition-timing-function: ease-in;
+      background-color: $button-color;
+      border-radius: 20px 20px 0 0;
+    }
+    .accordion-icon {
+      transition: transform 0.5s ease-in-out;
+      content: url(../../../public/assets/arrow-down.png);
+      width: 2rem;
+      height: 2rem;
+      &.is-open {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  .accordion-content {
+    background-color: $button-color;
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 0 0 20px 20px;
+    &.is-closed {
+      transition-property: max-height opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+    }
+    &.is-open {
+      transition-property: max-height opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in;
+      transition-delay: 0.25s;
+      max-height: 1000px;
+    }
+  }
+}
