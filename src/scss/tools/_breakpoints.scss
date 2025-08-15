@@ -1,21 +1,15 @@
 /* Breakpoints */
 
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
+$xs: 0px; // Extra small devices (phones)
+$sm: 576px; // Small devices (landscape phones)
+$md: 768px; // Medium devices (tablets)
+$lg: 992px; // Large devices (desktops)
+$xl: 1200px; // Extra large devices (large desktops)
+$xxl: 1600px; // 2K and up
+$uhd: 1920px; // 4K and up
 
-@mixin media-up ($breakpoint) {
-  @if $breakpoint == sm {
-    @media (min-width: $sm) { @content; }
-  } @else if $breakpoint == md {
-    @media (min-width: $md) { @content; }
-  } @else if $breakpoint == lg {
-    @media (min-width: $lg) { @content; }
-  } @else if $breakpoint == xl {
-    @media (min-width: $xl) { @content; }
-  } @else if $breakpoint == xxl {
-    @media (min-width: $xxl) { @content; }
+@mixin media-above($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
   }
 }
