@@ -4,8 +4,10 @@
 
 .header-content {
   animation: slideInLeft 5s;
-  @include media-above($md) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .heading-container {
     width: 50%;
-    display: inline-block;
   }
 }

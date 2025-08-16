@@ -3,9 +3,13 @@
 /* Base */
 
 body {
-  margin: 10% 10%;
+  margin: 0 10% 10% 10%;
   padding-bottom: 15%;
   background-color: $background-color;
+  @include media-above($md) {
+    margin: 5% 10%;
+    padding-bottom: 0;
+  }
 }
 
 main {
@@ -14,9 +18,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
-
-section {
-  width: 100%;
-  padding-bottom: 4rem;
+  section {
+    width: 100%;
+    padding-bottom: 4rem;
+  }
 }
