@@ -8,7 +8,7 @@ nav {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: $header-color;
+  background-color: $nav-bar-color;
   height: 3.5rem;
   animation: fadeIn 1.5s ease-in forwards;
   @include media-above($md) {

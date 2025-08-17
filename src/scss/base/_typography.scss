@@ -23,21 +23,25 @@ h2 {
 
 nav {
   a {
-    font-size: 0.8rem;
-    color: $secondary-color;
     font-weight: bold;
+    color: $nav-bar-text-color;
     &:hover {
-      color: $text-color;
+      color: $nav-bar-text-color-hover;
     }
   }
 }
 
 .contact-section {
   a {
-    color: $highlight-color;
     font-weight: bold;
+    color: $contact-link-color;
+    text-decoration: none;
     &:hover {
-      color: $text-color;
+      color: $contact-link-color-hover;
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $contact-link-color-visted;
     }
   }
 }

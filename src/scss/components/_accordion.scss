@@ -2,6 +2,7 @@
 
 // Accordions
 .accordion {
+  color: $button-text-color;
   background-color: $button-color;
   border-radius: 20px;
   &:hover {

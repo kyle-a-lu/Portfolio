@@ -34,7 +34,7 @@
 body {
   margin: 0 10% 10% 10%;
   padding-bottom: 15%;
-  background-color: #002347;
+  background-color: #000000;
 }
 @media (min-width: 768px) {
   body {
@@ -66,30 +66,34 @@ body {
 h1 {
   font-size: 4rem;
   margin-bottom: 0.25rem;
-  color: #b47846;
+  color: #afc4dd;
 }
 
 h2 {
   font-size: 2.5rem;
   margin-top: 0.25rem;
-  color: #b47846;
+  color: #afc4dd;
 }
 
 nav a {
-  font-size: 0.8rem;
-  color: #003366;
   font-weight: bold;
+  color: black;
 }
 nav a:hover {
-  color: #ffffff;
+  color: black;
 }
 
 .contact-section a {
-  color: #fd7702;
   font-weight: bold;
+  color: #afc4dd;
+  text-decoration: none;
 }
 .contact-section a:hover {
-  color: #ffffff;
+  color: #6e99c4;
+  text-decoration: underline;
+}
+.contact-section a:visited {
+  color: #b590f9;
 }
 
 /* Header */
@@ -122,7 +126,7 @@ nav {
   right: 0;
   bottom: 0;
   z-index: 1000;
-  background-color: #b47846;
+  background-color: #afc4dd;
   height: 3.5rem;
   animation: fadeIn 1.5s ease-in forwards;
 }
@@ -151,12 +155,13 @@ nav ul li a {
 }
 
 .accordion {
-  background-color: #4682b4;
+  color: black;
+  background-color: #afc4dd;
   border-radius: 20px;
 }
 .accordion:hover {
   cursor: pointer;
-  background-color: #36638a;
+  background-color: #6e99c4;
 }
 .accordion .accordion-header {
   margin: auto 0;
@@ -211,10 +216,6 @@ nav ul li a {
 .about-section .about-container .about-image {
   height: auto;
   width: 100%;
-  margin: 0 auto;
-  max-width: 375px;
-  display: block;
-  border-radius: 20%;
 }
 @media (min-width: 768px) {
   .about-section .about-content {
@@ -241,10 +242,6 @@ nav ul li a {
 .contact-section .avatar-container .avatar-image {
   height: auto;
   width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
 }
 @media (min-width: 992px) {
   .contact-section .contact-content {
@@ -315,9 +312,6 @@ nav ul li a {
 .clearance-container .clearance-image-container .clearance-image {
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
 }
 
 .resume-container {
@@ -338,9 +332,6 @@ nav ul li a {
 .resume-container .resume-image-container .resume-image {
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
 }
 
 /* Expereience Section */
@@ -350,34 +341,35 @@ nav ul li a {
   flex-direction: column;
   gap: 1rem;
 }
+@media (min-width: 992px) {
+  .experience-section {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .experience-section .experience-image-container {
+    width: 50%;
+  }
+}
 .experience-section .experience-image-container .experience-image {
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  display: block;
-  max-width: 375px;
-  border-radius: 30px;
 }
 .experience-section .experience-content-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+@media (min-width: 992px) {
+  .experience-section .experience-content-container {
+    width: 50%;
+  }
+}
 .experience-section .experience-content-container .experience-content-1 {
   animation: slideInLeft 5s;
 }
-@media (min-width: 768px) {
-  .experience-section .experience-content-container .experience-content-1 {
-    animation: none;
-  }
-}
 .experience-section .experience-content-container .experience-content-2 {
   animation: slideInRight 5s;
-}
-@media (min-width: 768px) {
-  .experience-section .experience-content-container .experience-content-2 {
-    animation: none;
-  }
 }
 
 /* Projects Section */
@@ -400,10 +392,6 @@ nav ul li a {
 .projects-section .projects-image-container .projects-image {
   width: 100%;
   height: auto;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
 }
 @media (min-width: 768px) {
   .projects-section .projects-content-container {
@@ -432,18 +420,16 @@ nav ul li a {
 .skills-section .skills-image-container .skills-image {
   height: auto;
   width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20%;
+}
+.skills-section .skills-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .skills-section .skills-container {
-    display: flex;
     width: 50%;
-    flex-direction: column;
     order: 1;
-    gap: 1rem;
   }
 }
 

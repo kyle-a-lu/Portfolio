@@ -1,16 +1,43 @@
 /* Colors */
 
-$background-color: #002347; // Midnight Blue
-$secondary-color: #003366; // Navy Blue
-$accent-color: #003f7d; // Deep Blue
-$highlight-color: #fd7702; // Orange
-$border-color: #ff5003; // Red-Orange
-$link-color: $accent-color;
-$placeholder-color: #999999; // Gray
-
-$header-color: #b47846; // White
-$white: #ffffff; // White
-$text-color: $white; // White
 $black: #000000; // Black
-$button-color: #4682b4; // Steel Blue
-$button-color-hover: #36638a; // Darker Steel Blue
+$white: #ffffff; // White
+
+$text-color: $white;
+$background-color: $black;
+
+$header-color: #afc4dd;
+
+$button-color: #afc4dd;
+$button-text-color: black;
+$button-color-hover: #6e99c4;
+
+$nav-bar-color: #afc4dd;
+$nav-bar-text-color: black;
+$nav-bar-text-color-hover: black;
+
+$contact-link-color: #afc4dd;
+$contact-link-color-hover: #6e99c4;
+$contact-link-color-visted: #b590f9;
+
+// // Pan Scheme
+// $pan-color1: #ff218c;
+// $pan-color3: #ffd800;
+// $pan-color2: #004266;
+
+// $text-color: $black;
+// $background-color: $pan-color3;
+
+// $header-color: $pan-color1;
+
+// $button-color: $pan-color2;
+// $button-text-color: black;
+// $button-color-hover: #6e99c4;
+
+// $nav-bar-color: $pan-color1;
+// $nav-bar-text-color: $white;
+// $nav-bar-text-color-hover: black;
+
+// $contact-link-color: $pan-color2;
+// $contact-link-color-hover: #013665;
+// $contact-link-color-visted: #3e0a9e;

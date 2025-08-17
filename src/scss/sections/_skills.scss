@@ -17,19 +17,15 @@
     .skills-image {
       height: auto;
       width: 100%;
-      max-width: 375px;
-      margin: 0 auto;
-      display: block;
-      border-radius: 20%;
     }
   }
   .skills-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
     @include media-above($md) {
-      display: flex;
       width: 50%;
-      flex-direction: column;
       order: 1;
-      gap: 1rem;
     }
   }
 }
