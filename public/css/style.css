@@ -79,9 +79,6 @@ nav a {
   font-weight: bold;
   color: black;
 }
-nav a:hover {
-  color: black;
-}
 
 .contact-section a {
   font-weight: bold;
@@ -146,8 +143,13 @@ nav ul {
 }
 nav ul li {
   padding: 1rem 0;
-  margin: 0.25rem;
   list-style: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+}
+nav ul li:hover {
+  background-color: #6e99c4;
 }
 nav ul li a {
   width: 100%;
