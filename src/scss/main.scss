@@ -1,5 +1,13 @@
 /* This file imports all SCSS partials and compiles them into styles.css */
 //
-@use 'base';
-@use 'components';
-@use 'sections';
+@use './base';
+@use './typography';
+@use '../components/Footer/footer';
+@use '../components/Icons/icons';
+@use '../components/AboutMe/about';
+@use '../components/Avatar/avatar';
+@use '../components/Experience/experience';
+@use '../components/Navigation/navigation';
+@use '../components/Projects/projects';
+@use '../components/ContactMe/contactMe';
+@use '../components/Header/header';

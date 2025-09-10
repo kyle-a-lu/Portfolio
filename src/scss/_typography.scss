@@ -1,0 +1,46 @@
+@use './colors' as *;
+
+/* Typography */
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: $text-color;
+}
+
+h1 {
+	font-size: 4rem;
+	margin-bottom: 0.25rem;
+	color: $header-color;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+h2 {
+	font-size: 2.5rem;
+	margin-top: 0.25rem;
+	color: $header-color;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+nav {
+	a {
+		font-weight: bold;
+		color: $nav-bar-text-color;
+	}
+}
+
+.contact-section {
+	a {
+		font-weight: bold;
+		color: $contact-link-color;
+		text-decoration: none;
+		&:hover {
+			color: $contact-link-color-hover;
+			text-decoration: underline;
+		}
+		&:visited {
+			color: $contact-link-color-visted;
+		}
+	}
+}

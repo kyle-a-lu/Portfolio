@@ -1,0 +1,24 @@
+nav {
+	z-index: 1000;
+	width: 100%;
+	margin-bottom: 10%;
+
+	&:hover {
+		cursor: pointer;
+	}
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		li {
+			text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+			font-size: 1.5rem;
+			width: 100%;
+			text-align: center;
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
+}
