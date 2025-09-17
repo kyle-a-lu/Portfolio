@@ -1,35 +1,10 @@
-export default function ContactMe() {
+export default function ContactMe({ active }) {
 	return (
-		<section
-			className='contact-section'
-			id='contact-section'
-		>
-			<div className='contact-content'>
-				<div className='clearance-container'>
-					<div className='clearance-image-container'>
-						<img
-							className='clearance-image'
-							src='../public/assets/clearance.png'
-							alt='Clearance Icon'
-						/>
-					</div>
-					<div className='clearance-content-container'>
-						<span>Security Clearance: Public Trust</span>
-					</div>
-				</div>
-				<div className='resume-container'>
-					<div className='resume-image-container'>
-						<img
-							className='resume-image'
-							src='../public/assets/resume.png'
-							alt='Resume Icon'
-						/>
-					</div>
-					<div className='resume-content-container'>
-						<span>Resume!</span>
-					</div>
-				</div>
-				<h3>Contact Me!</h3>
+		<>
+			<section
+				className={`contact-section ${active ? 'active-contact-me' : ''}`}
+				id='contact-section'
+			>
 				<ul>
 					<li>
 						<a href='tel:240-342-1527'>
@@ -72,7 +47,7 @@ export default function ContactMe() {
 						</a>
 					</li>
 				</ul>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }

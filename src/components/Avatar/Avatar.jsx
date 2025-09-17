@@ -1,10 +1,12 @@
-export default function Avatar({ children, openToolBox, activeAbout, activeExp, activeProjects }) {
+export default function Avatar({ children, openToolbox, activeAbout, activeExp, activeProjects, activeSkills }) {
 	let activeClass = '';
 
 	if (activeAbout) {
 		activeClass = 'active-about';
 	} else if (activeExp) {
 		activeClass = 'active-exp';
+	} else if (activeSkills) {
+		activeClass = 'active-skills';
 	} else if (activeProjects) {
 		activeClass = 'active-projects';
 	}
@@ -12,7 +14,7 @@ export default function Avatar({ children, openToolBox, activeAbout, activeExp, 
 	return (
 		<>
 			<img
-				onClick={openToolBox}
+				onClick={openToolbox}
 				className={`avatar-image ${activeClass}`}
 				src='../public/assets/avatar.png'
 				alt='Avatar'

@@ -1,4 +1,32 @@
-.header-content {
+@use '../../scss/breakpoints' as *;
+
+header {
 	display: flex;
 	justify-content: space-between;
+	z-index: 9999;
+	.heading-container {
+		width: 75%;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.contact-me-button-container {
+		width: clamp(5rem, 8rem, 10rem);
+		margin-left: auto;
+		display: grid;
+		place-items: center;
+		.contact-me-icon {
+			width: 50%;
+			transition: transform 0.6s ease-in-out;
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.2);
+			}
+		}
+	}
+	.contact-icons {
+		img {
+			width: 2rem;
+		}
+	}
 }

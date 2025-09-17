@@ -1,8 +1,7 @@
+@use '../../scss/breakpoints' as *;
 nav {
 	z-index: 1000;
 	width: 100%;
-	margin-bottom: 10%;
-
 	&:hover {
 		cursor: pointer;
 	}
@@ -10,14 +9,16 @@ nav {
 		display: flex;
 		list-style: none;
 		justify-content: space-between;
+		padding: 0 1rem;
 		li {
-			text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-
-			font-size: 1.5rem;
 			width: 100%;
 			text-align: center;
+			padding: 0.5rem;
+			box-sizing: border-box;
+			border: 3px solid transparent;
 			&:hover {
-				background-color: white;
+				border: 3px solid yellow;
+				border-radius: 15px;
 			}
 		}
 	}

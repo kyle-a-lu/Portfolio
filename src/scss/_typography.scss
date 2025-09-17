@@ -1,4 +1,5 @@
 @use './colors' as *;
+@use './breakpoints' as *;
 
 /* Typography */
 
@@ -9,38 +10,70 @@ body {
 	color: $text-color;
 }
 
-h1 {
-	font-size: 4rem;
-	margin-bottom: 0.25rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: $header-color;
 	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	margin: 0.25rem 0;
 }
 
-h2 {
-	font-size: 2.5rem;
-	margin-top: 0.25rem;
-	color: $header-color;
+a {
 	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	color: $contact-link-color;
 }
-
 nav {
-	a {
-		font-weight: bold;
-		color: $nav-bar-text-color;
+	li {
+		text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		a {
+			font-weight: bold;
+			color: $nav-bar-text-color;
+		}
 	}
 }
 
-.contact-section {
-	a {
-		font-weight: bold;
-		color: $contact-link-color;
-		text-decoration: none;
-		&:hover {
-			color: $contact-link-color-hover;
-			text-decoration: underline;
-		}
-		&:visited {
-			color: $contact-link-color-visted;
+footer {
+	font-size: 0.75rem;
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+.timeline {
+	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+@include media-above($md) {
+	h1 {
+		font-size: 4rem;
+		margin-bottom: 0.25rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		margin-top: 0.25rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		margin-top: 0.25rem;
+	}
+	.contact-section {
+		a {
+			font-weight: bold;
+			color: white;
+			text-decoration: none;
+			text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+			padding: 0.5rem;
+			&:hover {
+				color: $contact-link-color-hover;
+				text-decoration: none;
+				box-sizing: border-box;
+				border: 3px solid yellow;
+				border-radius: 1rem;
+			}
+			&:visited {
+				color: $contact-link-color-visted;
+			}
 		}
 	}
 }

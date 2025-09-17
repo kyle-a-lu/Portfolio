@@ -7,78 +7,105 @@ import Experience from './components/Experience/Experience';
 import Icons from './components/Icons/Icons';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
-import { EXPEREIENCE } from './components/Experience/experience';
-import ExperienceAccordion from './components/Experience/ExperienceAccordions';
 import './scss/main.scss';
 import { useState } from 'react';
 
 function App() {
-	const [iconsPopOut, setIconsPopOut] = useState(false);
+	const [iconsPopOut, setIconsPopOut] = useState(true);
 	const [aboutPopOut, setAboutPopOut] = useState(false);
 	const [experiencePopOut, setExperiencePopOut] = useState(false);
 	const [projectsPopOut, setProjectsPopOut] = useState(false);
+	const [contactMePopOut, setContactMePopOut] = useState(false);
+	const [skillsPopOut, setSkillsMePopOut] = useState(false);
 
 	function handleIcons() {
-		setIconsPopOut(!iconsPopOut);
 		setAboutPopOut(false);
 		setExperiencePopOut(false);
 		setProjectsPopOut(false);
-		console.log('Fired Icons');
+		setContactMePopOut(false);
+		setSkillsMePopOut(false);
+		setIconsPopOut(!iconsPopOut);
 	}
 	function handleAboutMe() {
 		setIconsPopOut(false);
 		setExperiencePopOut(false);
-		setAboutPopOut(!aboutPopOut);
 		setProjectsPopOut(false);
-		console.log('Fired About');
+		setContactMePopOut(false);
+		setSkillsMePopOut(false);
+		setAboutPopOut(!aboutPopOut);
 	}
 
 	function handleExperience() {
 		setIconsPopOut(false);
 		setAboutPopOut(false);
 		setProjectsPopOut(false);
+		setContactMePopOut(false);
+		setSkillsMePopOut(false);
 		setExperiencePopOut(!experiencePopOut);
-		console.log('Fired EXP');
 	}
 
 	function handleProjects() {
 		setIconsPopOut(false);
 		setAboutPopOut(false);
 		setExperiencePopOut(false);
+		setContactMePopOut(false);
+		setSkillsMePopOut(false);
 		setProjectsPopOut(!projectsPopOut);
-		console.log('Fired Projects');
+	}
+
+	function handleContactMe() {
+		setIconsPopOut(false);
+		setAboutPopOut(false);
+		setExperiencePopOut(false);
+		setProjectsPopOut(false);
+		setSkillsMePopOut(false);
+		setContactMePopOut(!contactMePopOut);
+	}
+
+	function handleSkills() {
+		setIconsPopOut(false);
+		setAboutPopOut(false);
+		setExperiencePopOut(false);
+		setProjectsPopOut(false);
+		setContactMePopOut(false);
+		setSkillsMePopOut(!skillsPopOut);
+	}
+	function handleReturnHome() {
+		setIconsPopOut(true);
+		setAboutPopOut(false);
+		setExperiencePopOut(false);
+		setProjectsPopOut(false);
+		setContactMePopOut(false);
+		setSkillsMePopOut(false);
 	}
 
 	return (
 		<>
-			<Header>{/* <ContactMe /> */}</Header>
+			<Header
+				returnHome={handleReturnHome}
+				openContactMe={handleContactMe}
+			/>
 			<Navigation
-				openToolBox={handleIcons}
 				openAboutMe={handleAboutMe}
 				openExperience={handleExperience}
 				openProjects={handleProjects}
+				openSkills={handleSkills}
 			></Navigation>
 			<main>
+				<ContactMe active={contactMePopOut} />
 				<Avatar
+					openToolbox={handleIcons}
 					activeAbout={aboutPopOut}
 					activeExp={experiencePopOut}
+					activeSkills={skillsPopOut}
 					activeProjects={projectsPopOut}
-				/>
-				<Icons active={iconsPopOut} />
+				>
+					<Icons active={iconsPopOut} />
+				</Avatar>
 				<AboutMe active={aboutPopOut} />
-				<Experience active={experiencePopOut}>
-					{EXPEREIENCE.map((job, jobIndex) => {
-						return (
-							<ExperienceAccordion
-								key={jobIndex}
-								job={job}
-								jobIndex={jobIndex}
-							/>
-						);
-					})}
-				</Experience>
+				<Experience active={experiencePopOut} />
 				<Projects active={projectsPopOut} />
-				{/* <Skills></Skills> */}
+				<Skills active={skillsPopOut}></Skills>
 			</main>
 		</>
 	);

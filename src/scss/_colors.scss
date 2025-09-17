@@ -6,7 +6,7 @@ $white: #ffffff; // White
 $text-color: $white;
 $background-color: $black;
 
-$header-color: #afc4dd;
+$header-color: $white;
 
 $button-color: #afc4dd;
 $button-text-color: black;
@@ -17,7 +17,7 @@ $nav-bar-color-hover: #6e99c4;
 $nav-bar-text-color: black;
 
 $contact-link-color: #afc4dd;
-$contact-link-color-hover: #6e99c4;
+$contact-link-color-hover: yellow;
 $contact-link-color-visted: #b590f9;
 
 // // Pan Scheme
@@ -41,3 +41,7 @@ $contact-link-color-visted: #b590f9;
 // $contact-link-color: $pan-color2;
 // $contact-link-color-hover: #013665;
 // $contact-link-color-visted: #3e0a9e;
+
+// Pink/Magenta	HEX = #FF218C	RGB = 255, 33, 140
+// Yellow	HEX = #FFD800	RGB = 255, 216, 0
+// Blue/Cyan	HEX = #21B1FF	RGB = 33, 177, 255
