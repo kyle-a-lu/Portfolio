@@ -7,46 +7,18 @@
 	align-self: center;
 	place-items: center;
 	display: grid;
-	transition: opacity 0.3s ease-in-out;
-	opacity: 0;
-	z-index: 1;
-	animation-play-state: paused;
 	.tools-icon {
-		opacity: 0;
 		grid-area: 1 / 1;
 		width: clamp(1rem, 1vw + 1rem, 3rem);
 		height: auto;
-		transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-		@include media-above($md) {
-			width: clamp(2.5rem, 1.5vw + 2rem, 4rem);
-		}
-		div {
-		}
 	}
 
-	&.active-icons {
-		z-index: 2;
-		opacity: 1;
-		animation: spin-icon-container 12s linear infinite;
-		.tools-icon {
-			opacity: 1;
-		}
-
-		@for $icon-number from 1 through 12 {
-			.tools-icon:nth-child(#{$icon-number}) {
-				$fan-angle: ($icon-number - 1) * 30deg - 90deg;
-				transform: rotate($fan-angle) translate(clamp(5rem, 30vw, 20rem)) rotate(-$fan-angle);
-				transition-delay: $icon-number * 0.05s;
-			}
-		}
-	}
-}
-
-@keyframes spin-icon-container {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+	// 	@for $icon-number from 1 through 12 {
+	// 		.tools-icon:nth-child(#{$icon-number}) {
+	// 			$fan-angle: ($icon-number - 1) * 30deg - 90deg;
+	// 			transform: rotate($fan-angle) translate(clamp(5rem, 30vw, 20rem)) rotate(-$fan-angle);
+	// 			transition-delay: $icon-number * 0.05s;
+	// 		}
+	// 	}
+	// }
 }

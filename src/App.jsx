@@ -11,101 +11,40 @@ import './scss/main.scss';
 import { useState } from 'react';
 
 function App() {
-	const [iconsPopOut, setIconsPopOut] = useState(true);
-	const [aboutPopOut, setAboutPopOut] = useState(false);
-	const [experiencePopOut, setExperiencePopOut] = useState(false);
-	const [projectsPopOut, setProjectsPopOut] = useState(false);
-	const [contactMePopOut, setContactMePopOut] = useState(false);
-	const [skillsPopOut, setSkillsMePopOut] = useState(false);
+	const [currentContent, setCurrentContent] = useState('');
 
-	function handleIcons() {
-		setAboutPopOut(false);
-		setExperiencePopOut(false);
-		setProjectsPopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(false);
-		setIconsPopOut(!iconsPopOut);
-	}
-	function handleAboutMe() {
-		setIconsPopOut(false);
-		setExperiencePopOut(false);
-		setProjectsPopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(false);
-		setAboutPopOut(!aboutPopOut);
-	}
-
-	function handleExperience() {
-		setIconsPopOut(false);
-		setAboutPopOut(false);
-		setProjectsPopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(false);
-		setExperiencePopOut(!experiencePopOut);
-	}
-
-	function handleProjects() {
-		setIconsPopOut(false);
-		setAboutPopOut(false);
-		setExperiencePopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(false);
-		setProjectsPopOut(!projectsPopOut);
-	}
-
-	function handleContactMe() {
-		setIconsPopOut(false);
-		setAboutPopOut(false);
-		setExperiencePopOut(false);
-		setProjectsPopOut(false);
-		setSkillsMePopOut(false);
-		setContactMePopOut(!contactMePopOut);
-	}
-
-	function handleSkills() {
-		setIconsPopOut(false);
-		setAboutPopOut(false);
-		setExperiencePopOut(false);
-		setProjectsPopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(!skillsPopOut);
-	}
-	function handleReturnHome() {
-		setIconsPopOut(true);
-		setAboutPopOut(false);
-		setExperiencePopOut(false);
-		setProjectsPopOut(false);
-		setContactMePopOut(false);
-		setSkillsMePopOut(false);
+	function handleSwitchContent(content) {
+		if (content !== currentContent) {
+			setCurrentContent(content);
+		}
 	}
 
 	return (
 		<>
 			<Header
-				returnHome={handleReturnHome}
-				openContactMe={handleContactMe}
+				returnHome={() => handleSwitchContent('')}
+				openContactMe={() => handleSwitchContent('contact')}
 			/>
 			<Navigation
-				openAboutMe={handleAboutMe}
-				openExperience={handleExperience}
-				openProjects={handleProjects}
-				openSkills={handleSkills}
+				openAboutMe={() => handleSwitchContent('about')}
+				openExperience={() => handleSwitchContent('experience')}
+				openProjects={() => handleSwitchContent('projects')}
+				openSkills={() => handleSwitchContent('skills')}
 			></Navigation>
 			<main>
-				<ContactMe active={contactMePopOut} />
-				<Avatar
-					openToolbox={handleIcons}
-					activeAbout={aboutPopOut}
-					activeExp={experiencePopOut}
-					activeSkills={skillsPopOut}
-					activeProjects={projectsPopOut}
-				>
-					<Icons active={iconsPopOut} />
-				</Avatar>
-				<AboutMe active={aboutPopOut} />
-				<Experience active={experiencePopOut} />
-				<Projects active={projectsPopOut} />
-				<Skills active={skillsPopOut}></Skills>
+				{currentContent === 'contact' && <ContactMe />}
+				{currentContent === '' && (
+					<Avatar
+						openToolbox={() => handleSwitchContent('')}
+						activeContent={currentContent}
+					>
+						<Icons />
+					</Avatar>
+				)}
+				{currentContent === 'about' && <AboutMe />}
+				{currentContent === 'experience' && <Experience />}
+				{currentContent === 'projects' && <Projects />}
+				{currentContent === 'skills' && <Skills />}
 			</main>
 		</>
 	);

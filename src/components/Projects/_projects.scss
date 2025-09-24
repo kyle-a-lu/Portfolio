@@ -3,14 +3,6 @@
 .projects-section {
 	grid-column: 1 / 5;
 	grid-row: 1 / 6;
-	opacity: 0;
-	transition: opacity 0.6s ease-in-out;
-	z-index: 1;
-	&.active-projects {
-		z-index: 2;
-		opacity: 1;
-		transition-delay: 0.6s;
-	}
 	.projects-content-container {
 		display: flex;
 		flex-direction: row;
@@ -25,26 +17,16 @@
 		box-sizing: border-box;
 		border-radius: 1rem;
 		border: 3px solid black;
-		transition: transform 0.6s ease-in-out;
 		flex: 1 1 0;
-		&:hover {
-			transform: scale(0.95);
-			border: 3px solid yellow;
-		}
-		@include media-above($md) {
-			flex-direction: row;
-		}
 		.project-card-media {
 			box-sizing: border-box;
 			overflow: hidden;
 			aspect-ratio: 1/1;
+			width: 10rem;
 			.project-card-image {
 				width: 100%;
 				height: auto;
 				border-radius: 1rem 1rem 0 0;
-				@include media-above($md) {
-					border-radius: 1rem 0 0 1rem;
-				}
 			}
 		}
 		.project-card-body {

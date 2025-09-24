@@ -9,8 +9,8 @@ export default function Skills({ active }) {
 			<h2>Skills</h2>
 
 			<div className='skills-container'>
-				{ICONS.map((icons) => (
-					<div>
+				{ICONS.map((icons, iconsIndex) => (
+					<div key={iconsIndex}>
 						<h3>{icons.category}</h3>
 						<div
 							key={icons.category}

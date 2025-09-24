@@ -1,3 +1,4 @@
+// export default function Avatar({ children, openToolbox, activeAbout, activeExp, activeProjects, activeSkills }) {
 export default function Avatar({ children, openToolbox, activeAbout, activeExp, activeProjects, activeSkills }) {
 	let activeClass = '';
 

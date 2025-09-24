@@ -3,14 +3,7 @@
 .contact-section {
 	grid-column: 1 / 5;
 	grid-row: 1 / 6;
-	opacity: 0;
 	transition: opacity 0.6s ease-in-out;
-	z-index: 1;
-	&.active-contact-me {
-		z-index: 2;
-		opacity: 1;
-		transition-delay: 0.6s;
-	}
 	ul {
 		display: flex;
 		flex-direction: row;
@@ -18,10 +11,6 @@
 		justify-content: space-evenly;
 		padding: 0;
 		li {
-			transition: transform 0.6s ease-in-out;
-			&:hover {
-				transform: scale(1.2);
-			}
 			a {
 				display: flex;
 				flex-direction: column;
