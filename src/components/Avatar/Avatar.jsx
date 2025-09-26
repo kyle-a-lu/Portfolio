@@ -1,26 +1,26 @@
-// export default function Avatar({ children, openToolbox, activeAbout, activeExp, activeProjects, activeSkills }) {
-export default function Avatar({ children, openToolbox, activeAbout, activeExp, activeProjects, activeSkills }) {
-	let activeClass = '';
+import { useState } from 'react';
+import Icons from '../Icons/Icons';
+import { motion, AnimatePresence } from 'motion/react';
 
-	if (activeAbout) {
-		activeClass = 'active-about';
-	} else if (activeExp) {
-		activeClass = 'active-exp';
-	} else if (activeSkills) {
-		activeClass = 'active-skills';
-	} else if (activeProjects) {
-		activeClass = 'active-projects';
+export default function Avatar({}) {
+	const [toggleIconsRadial, setToggleIconsRadial] = useState(true);
+	function handleOpenIconsRadial() {
+		setToggleIconsRadial(!toggleIconsRadial);
+		console.log('Fired Icons', toggleIconsRadial);
 	}
-
 	return (
-		<>
-			<img
-				onClick={openToolbox}
-				className={`avatar-image ${activeClass}`}
-				src='../public/assets/avatar.png'
+		<div className='avatar-container'>
+			<motion.img
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ type: 'spring', duration: 1 }}
+				exit={{ opacity: 0 }}
+				onClick={handleOpenIconsRadial}
+				className={'avatar-image'}
+				src='/assets/avatar.png'
 				alt='Avatar'
 			/>
-			{children}
-		</>
+			<AnimatePresence propagate>{toggleIconsRadial && <Icons />}</AnimatePresence>
+		</div>
 	);
 }

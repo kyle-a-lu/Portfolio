@@ -1,44 +1,38 @@
 @use '../../scss/breakpoints' as *;
 
-.projects-section {
-	grid-column: 1 / 5;
-	grid-row: 1 / 6;
+#projects-section {
+	margin: 1rem 0;
 	.projects-content-container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 1rem;
-		width: 100%;
-		box-sizing: border-box;
-	}
-	.project-card {
-		display: flex;
-		flex-direction: column;
-		box-sizing: border-box;
-		border-radius: 1rem;
-		border: 3px solid black;
-		flex: 1 1 0;
-		.project-card-media {
-			box-sizing: border-box;
+		.project-card {
+			display: flex;
+			flex-direction: column;
+			border-radius: 15px;
+			border: 3px solid black;
 			overflow: hidden;
-			aspect-ratio: 1/1;
-			width: 10rem;
-			.project-card-image {
-				width: 100%;
-				height: auto;
-				border-radius: 1rem 1rem 0 0;
-			}
-		}
-		.project-card-body {
-			width: 100%;
 			box-sizing: border-box;
-			p {
-				margin: 0.5rem;
+			@include media-above($md) {
+				width: calc(50% - 0.5rem);
 			}
-		}
-		.project-card:last-child:nth-child(3n + 2),
-		.project-card:last-child:nth-child(3n + 1) {
-			justify-self: center;
+			@include media-above($md) {
+				width: calc(25% - 0.75rem);
+			}
+			.project-card-media {
+				.project-card-image {
+					box-sizing: border-box;
+					border-bottom: 3px solid black;
+					aspect-ratio: 1/1;
+					width: 100%;
+				}
+			}
+			.project-card-body {
+				p {
+					padding: 0 0.5rem;
+				}
+			}
 		}
 	}
 }

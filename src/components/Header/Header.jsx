@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 export default function Header({ openContactMe, returnHome }) {
 	return (
 		<header>
@@ -9,7 +11,14 @@ export default function Header({ openContactMe, returnHome }) {
 				<h2>Software Engineer</h2>
 			</div>
 			<div className='contact-me-button-container'>
-				<img
+				<motion.img
+					whileHover={{ scale: 1.1 }}
+					transition={{
+						type: 'spring',
+						stiffness: 500,
+						mass: 0.5,
+					}}
+					whileTap={{ scale: 0.95 }}
 					onClick={openContactMe}
 					className='contact-me-icon'
 					src='/public/assets/contact.png'

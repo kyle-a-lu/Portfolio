@@ -1,9 +1,14 @@
 import { ICONS } from '../Icons/icons';
+import { motion } from 'motion/react';
 
 export default function Skills({ active }) {
 	return (
-		<section
-			className={`skills-section ${active ? 'active-skills' : ''}`}
+		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ type: 'spring', duration: 1 }}
+			exit={{ opacity: 0 }}
+			className='skills-section'
 			id='skills-section'
 		>
 			<h2>Skills</h2>
@@ -29,6 +34,6 @@ export default function Skills({ active }) {
 					</div>
 				))}
 			</div>
-		</section>
+		</motion.section>
 	);
 }

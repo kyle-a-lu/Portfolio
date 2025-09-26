@@ -4,47 +4,45 @@ import Navigation from './components/Navigation/Navigation';
 import Avatar from './components/Avatar/Avatar';
 import AboutMe from './components/AboutMe/AboutMe';
 import Experience from './components/Experience/Experience';
-import Icons from './components/Icons/Icons';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import './scss/main.scss';
 import { useState } from 'react';
+import { AnimatePresence } from 'motion/react';
 
 function App() {
-	const [currentContent, setCurrentContent] = useState('');
+	const [currentContent, setCurrentContent] = useState(undefined);
 
 	function handleSwitchContent(content) {
+		console.log('Fired', content);
 		if (content !== currentContent) {
 			setCurrentContent(content);
+		} else {
+			setCurrentContent(undefined);
 		}
 	}
 
 	return (
 		<>
 			<Header
-				returnHome={() => handleSwitchContent('')}
-				openContactMe={() => handleSwitchContent('contact')}
+				returnHome={() => handleSwitchContent('Home')}
+				openContactMe={() => handleSwitchContent('Contact')}
 			/>
 			<Navigation
-				openAboutMe={() => handleSwitchContent('about')}
-				openExperience={() => handleSwitchContent('experience')}
-				openProjects={() => handleSwitchContent('projects')}
-				openSkills={() => handleSwitchContent('skills')}
+				openContent={handleSwitchContent}
+				activeContent={currentContent}
 			></Navigation>
 			<main>
-				{currentContent === 'contact' && <ContactMe />}
-				{currentContent === '' && (
-					<Avatar
-						openToolbox={() => handleSwitchContent('')}
-						activeContent={currentContent}
-					>
-						<Icons />
-					</Avatar>
-				)}
-				{currentContent === 'about' && <AboutMe />}
-				{currentContent === 'experience' && <Experience />}
-				{currentContent === 'projects' && <Projects />}
-				{currentContent === 'skills' && <Skills />}
+				<AnimatePresence>
+					{currentContent === 'Contact' && <ContactMe />}
+					{/* {currentContent === 'Home' &&  */}
+					<Avatar activeContent={currentContent} />
+					{/* } */}
+					{currentContent === 'About' && <AboutMe />}
+					{currentContent === 'Experience' && <Experience />}
+					{currentContent === 'Projects' && <Projects />}
+					{currentContent === 'Skills' && <Skills />}
+				</AnimatePresence>
 			</main>
 		</>
 	);

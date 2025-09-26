@@ -1,7 +1,13 @@
+import { motion } from 'motion/react';
+
 export default function About({ active }) {
 	return (
-		<section
-			className={`about-section ${active ? 'active-about' : ''}`}
+		<motion.section
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ type: 'spring', duration: 1 }}
+			exit={{ opacity: 0 }}
+			className='about-section'
 			id='about-section'
 		>
 			<h2>About Me</h2>
@@ -12,6 +18,6 @@ export default function About({ active }) {
 				508 standards and performs consistently across browsers. I am committed to writing clean, maintainable code and continuously improving my skills and workflows to better serve clients and
 				users.
 			</p>
-		</section>
+		</motion.section>
 	);
 }

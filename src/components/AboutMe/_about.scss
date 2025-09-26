@@ -1,9 +1,6 @@
 @use '../../scss/breakpoints' as *;
 
 .about-section {
-	grid-column: 1 / 5;
-	grid-row: 1 / 9;
-	z-index: 1;
 	p {
 		font-size: 1.05rem;
 		margin: 0;

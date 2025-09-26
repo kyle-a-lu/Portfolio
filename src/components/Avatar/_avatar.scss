@@ -1,21 +1,20 @@
 @use '../../scss/breakpoints' as *;
-
-@use '../../scss/breakpoints' as *;
-
-.avatar-image {
-	grid-column: 2 / 4;
-	grid-row: 4 / 6;
-	justify-self: center;
-	align-self: center;
-	width: 75%;
-	max-width: 30rem;
-	max-height: 30rem;
-	background-color: white;
-	border: 3px solid black;
-	border-radius: 50%;
-	z-index: 10;
-	&:hover {
-		border: 3px solid yellow;
-		cursor: pointer;
+.avatar-container {
+	position: relative;
+	flex: 1;
+	display: grid;
+	.avatar-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 25%;
+		background-color: white;
+		border: 3px solid black;
+		border-radius: 50%;
+		&:hover {
+			border: 3px solid yellow;
+			cursor: pointer;
+		}
 	}
 }

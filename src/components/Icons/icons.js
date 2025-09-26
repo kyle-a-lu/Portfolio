@@ -30,6 +30,8 @@ export const ICONS = [
 	},
 	{
 		category: 'Tools',
-		icons: [{ src: '../public/assets/tools-icons/docker.png', alt: 'Docker Icon' }],
+		icons: [
+			{ src: '../public/assets/tools-icons/docker.png', alt: 'Docker Icon' }
+		],
 	},
 ];

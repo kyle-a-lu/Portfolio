@@ -11,12 +11,12 @@ header {
 		}
 	}
 	.contact-me-button-container {
-		width: clamp(5rem, 8rem, 10rem);
-		margin-left: auto;
-		display: grid;
-		place-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
 		.contact-me-icon {
-			width: 50%;
+			width: 3rem;
 			&:hover {
 				cursor: pointer;
 			}

@@ -1,24 +1,21 @@
 @use '../../scss/breakpoints' as *;
-
-.radial-container {
-	grid-column: 2 / 4;
-	grid-row: 4 / 6;
-	justify-self: center;
-	align-self: center;
-	place-items: center;
+.icon-container {
 	display: grid;
-	.tools-icon {
-		grid-area: 1 / 1;
-		width: clamp(1rem, 1vw + 1rem, 3rem);
+	place-items: center;
+	.radial-container {
+		display: grid;
+		place-items: center;
+		grid-area: 1/1;
+		width: 25vw;
 		height: auto;
+		aspect-ratio: 1 / 1;
+		z-index: -1;
+		.fan-out-container {
+			grid-area: 1/1;
+			.tools-icon {
+				width: clamp(1rem, 5vw, 4rem);
+				height: auto;
+			}
+		}
 	}
-
-	// 	@for $icon-number from 1 through 12 {
-	// 		.tools-icon:nth-child(#{$icon-number}) {
-	// 			$fan-angle: ($icon-number - 1) * 30deg - 90deg;
-	// 			transform: rotate($fan-angle) translate(clamp(5rem, 30vw, 20rem)) rotate(-$fan-angle);
-	// 			transition-delay: $icon-number * 0.05s;
-	// 		}
-	// 	}
-	// }
 }

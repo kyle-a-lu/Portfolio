@@ -42,38 +42,38 @@ footer {
 .timeline {
 	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
-@include media-above($md) {
-	h1 {
-		font-size: 4rem;
-		margin-bottom: 0.25rem;
-	}
+// @include media-above($md) {
+// 	h1 {
+// 		font-size: 4rem;
+// 		margin-bottom: 0.25rem;
+// 	}
 
-	h2 {
-		font-size: 2.5rem;
-		margin-top: 0.25rem;
-	}
+// 	h2 {
+// 		font-size: 2.5rem;
+// 		margin-top: 0.25rem;
+// 	}
 
-	h3 {
-		font-size: 1.5rem;
-		margin-top: 0.25rem;
-	}
-	.contact-section {
-		a {
-			font-weight: bold;
-			color: white;
-			text-decoration: none;
-			text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-			padding: 0.5rem;
-			&:hover {
-				color: $contact-link-color-hover;
-				text-decoration: none;
-				box-sizing: border-box;
-				border: 3px solid yellow;
-				border-radius: 1rem;
-			}
-			&:visited {
-				color: $contact-link-color-visted;
-			}
-		}
-	}
-}
+// 	h3 {
+// 		font-size: 1.5rem;
+// 		margin-top: 0.25rem;
+// 	}
+// 	.contact-section {
+// 		a {
+// 			font-weight: bold;
+// 			color: white;
+// 			text-decoration: none;
+// 			text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+// 			padding: 0.5rem;
+// 			&:hover {
+// 				color: $contact-link-color-hover;
+// 				text-decoration: none;
+// 				box-sizing: border-box;
+// 				border: 3px solid yellow;
+// 				border-radius: 1rem;
+// 			}
+// 			&:visited {
+// 				color: $contact-link-color-visted;
+// 			}
+// 		}
+// 	}
+// }
