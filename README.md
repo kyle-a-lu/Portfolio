@@ -5,9 +5,9 @@ This is my personal web developer portfolio, built to showcase my skills, projec
 ## Tech Stack
 
 - HTML5
-- SCSS (using modern module syntax)
+- SCSS
 - React
-
+- Motion Library
 
 # React + Vite
 
