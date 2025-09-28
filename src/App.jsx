@@ -9,16 +9,14 @@ import Skills from './components/Skills/Skills';
 import './scss/main.scss';
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import Icons from './components/Icons/Icons';
 
 function App() {
-	const [currentContent, setCurrentContent] = useState(undefined);
+	const [currentContent, setCurrentContent] = useState('Home');
 
 	function handleSwitchContent(content) {
-		console.log('Fired', content);
 		if (content !== currentContent) {
 			setCurrentContent(content);
-		} else {
-			setCurrentContent(undefined);
 		}
 	}
 
@@ -33,15 +31,21 @@ function App() {
 				activeContent={currentContent}
 			></Navigation>
 			<main>
-				<AnimatePresence>
-					{currentContent === 'Contact' && <ContactMe />}
-					{/* {currentContent === 'Home' &&  */}
-					<Avatar activeContent={currentContent} />
-					{/* } */}
-					{currentContent === 'About' && <AboutMe />}
-					{currentContent === 'Experience' && <Experience />}
-					{currentContent === 'Projects' && <Projects />}
-					{currentContent === 'Skills' && <Skills />}
+				<AnimatePresence mode='wait'>
+					{currentContent === 'Contact' && <ContactMe key='Contact' />}
+					{currentContent === 'Home' && (
+						<div className='avatar-container'>
+							<Avatar
+								key='Home'
+								activeContent={currentContent}
+							/>
+							<Icons key='icons' />
+						</div>
+					)}
+					{currentContent === 'About' && <AboutMe key='About' />}
+					{currentContent === 'Experience' && <Experience key='Experience' />}
+					{currentContent === 'Projects' && <Projects key='Projects' />}
+					{currentContent === 'Skills' && <Skills key='Skills' />}
 				</AnimatePresence>
 			</main>
 		</>
