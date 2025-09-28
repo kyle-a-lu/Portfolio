@@ -4,6 +4,7 @@ $black: #000000; // Black
 $white: #ffffff; // White
 
 $text-color: $white;
+$text-color-reverse: $black;
 $background-color: $black;
 
 $header-color: $white;
@@ -21,27 +22,6 @@ $contact-link-color-hover: yellow;
 $contact-link-color-visted: #b590f9;
 
 // // Pan Scheme
-$pan-color1: #ff218c;
-$pan-color3: #ffd800;
-$pan-color2: #004266;
-
-// $text-color: $black;
-// $background-color: $pan-color3;
-
-// $header-color: $pan-color1;
-
-// $button-color: $pan-color2;
-// $button-text-color: black;
-// $button-color-hover: #6e99c4;
-
-// $nav-bar-color: $pan-color1;
-// $nav-bar-text-color: $white;
-// $nav-bar-text-color-hover: black;
-
-// $contact-link-color: $pan-color2;
-// $contact-link-color-hover: #013665;
-// $contact-link-color-visted: #3e0a9e;
-
 // Pink/Magenta	HEX = #FF218C	RGB = 255, 33, 140
 // Yellow	HEX = #FFD800	RGB = 255, 216, 0
 // Blue/Cyan	HEX = #21B1FF	RGB = 33, 177, 255

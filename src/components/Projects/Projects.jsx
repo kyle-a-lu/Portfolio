@@ -4,19 +4,18 @@ export default function Projects({}) {
 		<>
 			<motion.section
 				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ type: 'spring', duration: 1 }}
-				exit={{ opacity: 0 }}
+				animate={{ opacity: 1, transition: { type: 'spring', duration: 0.15 } }}
+				exit={{ opacity: 0, transition: { type: 'spring', duration: 0.1 } }}
 				className='projects'
 				id='projects-section'
 			>
-				<h2>Projects</h2>
+				{/* <h2>Projects</h2> */}
 				<div className='projects-content-container'>
 					<div className='project-card'>
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>
@@ -37,7 +36,7 @@ export default function Projects({}) {
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>
@@ -57,7 +56,7 @@ export default function Projects({}) {
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>
@@ -77,7 +76,7 @@ export default function Projects({}) {
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>
@@ -97,7 +96,7 @@ export default function Projects({}) {
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>
@@ -117,7 +116,7 @@ export default function Projects({}) {
 						<div className='project-card-media'>
 							<img
 								className='project-card-image'
-								src='../public/assets/portfolio-screenshot1x1.png'
+								src='../src/assets/portfolio-screenshot1x1.png'
 								alt='project-card'
 							/>
 						</div>

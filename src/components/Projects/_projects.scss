@@ -14,7 +14,7 @@
 			border: 3px solid black;
 			overflow: hidden;
 			box-sizing: border-box;
-			@include media-above($md) {
+			@include media-above($sm) {
 				width: calc(50% - 0.5rem);
 			}
 			@include media-above($md) {

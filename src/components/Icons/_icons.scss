@@ -9,12 +9,16 @@
 		width: 25vw;
 		height: auto;
 		aspect-ratio: 1 / 1;
-		z-index: -1;
 		.fan-out-container {
 			grid-area: 1/1;
-			.tools-icon {
-				width: clamp(1rem, 5vw, 4rem);
-				height: auto;
+			.tools-scale-container {
+				.tools-icon {
+					width: clamp(1rem, 5vw, 4rem);
+					height: auto;
+					&:hover {
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}

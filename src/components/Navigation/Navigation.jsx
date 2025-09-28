@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 
-const NAV_ITEMS = ['About', 'Experience', 'Skills', 'Projects'];
+const NAV_ITEMS = ['Home', 'About', 'Experience', 'Skills', 'Projects'];
 
 export default function Navigation({ openContent, activeContent }) {
 	return (
@@ -11,10 +11,11 @@ export default function Navigation({ openContent, activeContent }) {
 						<AnimatePresence key={content}>
 							<motion.li
 								layout
-								animate={{ scale: 0.95 }}
+								initial={{ scale: 0.85 }}
+								exit={{ scale: 0.85 }}
 								transition={{ duration: 0.6, type: 'spring' }}
-								whileHover={{ scale: 1, borderRadius: 10 }}
-								whileTap={{ scale: 0.85 }}
+								whileHover={{ scale: 1, borderRadius: 10, backgroundColor: 'rgba(255,255,255, 0.15)' }}
+								whileTap={{ scale: 0.75 }}
 								onClick={() => openContent(content)}
 							>
 								{NAV_ITEMS[contentIndex]}
@@ -32,3 +33,5 @@ export default function Navigation({ openContent, activeContent }) {
 		</nav>
 	);
 }
+
+//Add active scale to nav current state

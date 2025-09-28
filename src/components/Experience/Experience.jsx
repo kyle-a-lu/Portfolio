@@ -1,5 +1,6 @@
 import { TIMELINE_DATA } from './timeline_data';
 import { motion } from 'motion/react';
+
 export default function Experience({ active }) {
 	const TIMELINE_ENTRY = TIMELINE_DATA.map((entry, entryIndex) => {
 		return (
@@ -30,27 +31,15 @@ export default function Experience({ active }) {
 		<>
 			<motion.section
 				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ type: 'spring', duration: 1 }}
-				exit={{ opacity: 0 }}
+				animate={{ opacity: 1, transition: { type: 'spring', duration: 0.15 } }}
+				exit={{ opacity: 0, transition: { type: 'spring', duration: 0.1 } }}
 				className='experience-section'
 			>
-				<h2>Experience</h2>
+				{/* <h2>Experience</h2> */}
 				<div
 					className='timeline-container'
 					id='experience-section'
 				>
-					{/* <div className='scroll-icons'>
-						<img
-							src=''
-							alt=''
-						/>
-						Scroll{' '}
-						<img
-							src=''
-							alt=''
-						/>
-					</div> */}
 					<ul className='timeline'>{TIMELINE_ENTRY}</ul>
 				</div>
 			</motion.section>

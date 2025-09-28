@@ -22,6 +22,9 @@
 		mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 		mask-repeat: no-repeat;
 		mask-size: 100% 100%;
+		@include media-above($md) {
+			width: 50%;
+		}
 		.timeline {
 			display: flex;
 			flex-direction: column;
@@ -110,3 +113,5 @@
 		opacity: 0;
 	}
 }
+
+// experience Aniamtions add with motion

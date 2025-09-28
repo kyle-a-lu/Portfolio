@@ -21,7 +21,7 @@ export default function Header({ openContactMe, returnHome }) {
 					whileTap={{ scale: 0.95 }}
 					onClick={openContactMe}
 					className='contact-me-icon'
-					src='/public/assets/contact.png'
+					src='../src/assets/contact.png'
 					alt='Contact Me Icon'
 				/>
 			</div>
