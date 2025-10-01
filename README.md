@@ -1,23 +1,58 @@
 # Kyle Lu – Web Developer Portfolio
 
-This is my personal web developer portfolio, built to showcase my skills, projects, and experience.
+A portfolio built with **React** and **Node.js**, featuring a contact form powered by **Nodemailer**.
+
+---
 
 ## Tech Stack
 
-- HTML5
-- SCSS
-- React
-- Motion Library
+- **Frontend:** HTML5, SCSS, React, Motion Library
+- **Backend:** Node.js, Express, Nodemailer
+- **Build Tool:** Vite
 
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Structure
 
-Currently, two official plugins are available:
+Portfolio/
+├─ backend/
+│ ├─ server.js
+│ ├─ package.json
+│ └─ .env # Email credentials (Not in GitHub)
+├─ frontend/
+│ ├─ public/
+│ └─ src/
+│ ├─ App.js
+│ └─ ContactForm.js
+│ └─ package.json
+├─ .gitignore
+└─ README.md
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+cd frontend  
+npm install  
+npm run dev
+
+### Backend
+
+cd backend  
+npm install  
+npm start
+
+### Running Both in Development
+
+You can run React and the backend simultaneously from the project root (if you add a dev script):
+
+npm run dev
+
+### Environment Variables
+
+Create a `.env` file in the `backend` folder with your email credentials:
+
+EMAIL_USER=your-email@gmail.com  
+EMAIL_PASS=your-app-password
