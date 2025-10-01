@@ -39,7 +39,7 @@ export default function VolumeButton() {
 				transition={{ type: 'spring', duration: 0.5, bounce: 0.75 }}
 				className='volume-icon-wave-one'
 				src='../src/assets/sound-wave/volume-icon-soundwave.PNG'
-				alt='volume-icon'
+				alt='volume-soundwave-one'
 			/>
 			<motion.img
 				initial={{ x: soundWaveTwoX, scale: soundWaveTwoScale }}
@@ -48,7 +48,7 @@ export default function VolumeButton() {
 				transition={{ type: 'spring', duration: 0.5, bounce: 0.75 }}
 				className='volume-icon-wave-two'
 				src='../src/assets/sound-wave/volume-icon-soundwave.PNG'
-				alt='volume-icon'
+				alt='volume-soundwave-two'
 			/>
 		</button>
 	);

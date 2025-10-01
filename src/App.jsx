@@ -20,10 +20,7 @@ import { AnimatePresence } from 'motion/react';
 
 function App() {
 	const [currentContent, setCurrentContent] = useState('Home');
-	const modalRef = useRef(null);
-
-	const showContactFormModal = () => modalRef.current?.showModal();
-	const closeContactFormModal = () => modalRef.current?.close();
+	const [isContactOpen, setIsContactOpen] = useState(false);
 
 	const handleSwitchContent = (content) => {
 		if (content !== currentContent) setCurrentContent(content);
@@ -33,8 +30,11 @@ function App() {
 		<>
 			<Header returnHome={() => handleSwitchContent('Home')}>
 				<HeaderLinks>
-					<ContactButton openContactFormModal={showContactFormModal} />
-					<ContactForm modalRef={modalRef} />
+					<ContactButton openContactFormModal={() => setIsContactOpen(true)} />
+					<ContactForm
+						isOpen={isContactOpen}
+						onClose={() => setIsContactOpen(false)}
+					/>
 				</HeaderLinks>
 				<HeaderUtilities>
 					<ThemeButton />

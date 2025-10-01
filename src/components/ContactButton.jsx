@@ -29,7 +29,7 @@ export default function ContactButton({ openContactFormModal }) {
 					}}
 					whileTap={{ scale: 0.95 }}
 					src='../src/assets/contact-icons/github.png'
-					alt='Contact Me Icon'
+					alt='Github Icon'
 				/>
 			</a>
 
@@ -46,7 +46,7 @@ export default function ContactButton({ openContactFormModal }) {
 					}}
 					whileTap={{ scale: 0.95 }}
 					src='../src/assets/contact-icons/linkedin.png'
-					alt='Contact Me Icon'
+					alt='Linkedin Icon'
 				/>
 			</a>
 		</div>

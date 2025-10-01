@@ -74,3 +74,13 @@ footer {
 		}
 	}
 }
+.contact-form {
+	.contact-form-subtitle {
+		text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
+		font-size: 1.25rem;
+	}
+	label {
+		font-size: 1.5rem;
+		text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
+	}
+}

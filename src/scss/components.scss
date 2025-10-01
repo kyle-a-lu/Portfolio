@@ -97,7 +97,7 @@
 		width: 50%;
 		display: grid;
 		place-items: center;
-		padding: 1rem;
+		padding: 0.5rem;
 		text-align: center;
 
 		img {
@@ -308,8 +308,6 @@ nav {
 header {
 	display: flex;
 	justify-content: space-between;
-	z-index: 9999;
-
 	.heading-container {
 		width: 75%;
 		&:hover {
@@ -334,8 +332,8 @@ header {
 		}
 		.header-utilities {
 			display: flex;
-			gap: 1rem;
 			justify-content: flex-end;
+			align-items: center;
 		}
 	}
 }
@@ -351,19 +349,37 @@ footer {
 }
 
 // ------------------- Contact Form -------------------
-.contact-form {
-	width: 100%;
-	max-width: 30rem;
-
-	.contact-form-input {
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-	}
-
-	button {
-		margin: 1rem;
-		padding: 0.5rem;
+.contact-form-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	.contact-form {
+		width: 80%;
+		max-width: 40rem;
+		.contact-form-input {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0.5rem;
+			label {
+				margin-bottom: 0;
+			}
+		}
+		menu {
+			display: flex;
+			justify-content: center;
+			padding-left: 0;
+			button {
+				margin: 1rem;
+				padding: 0.5rem;
+			}
+		}
 	}
 }
 
