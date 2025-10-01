@@ -2,13 +2,5 @@
 //
 @use './base';
 @use './typography';
-@use '../components/Footer/footer';
-@use '../components/Icons/icons';
-@use '../components/Avatar/avatar';
-@use '../components/Header/header';
-@use '../components/Navigation/navigation';
-@use '../components/ContactMe/contactMe';
-@use '../components/AboutMe/about';
-@use '../components/Experience/experience';
-@use '../components/Skills/skills';
-@use '../components/Projects/projects';
+@use './colors';
+@use './components';

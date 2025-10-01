@@ -1,27 +1,74 @@
-/* Colors */
+@use 'sass:map';
 
-$black: #000000; // Black
-$white: #ffffff; // White
+/* Base colors */
+$black: #000000;
+$white: #ffffff;
 
-$text-color: $white;
-$text-color-reverse: $black;
-$background-color: $black;
+/* Palette */
+$lightblue: #afc4dd;
+$blue: #6e99c4;
+$yellow: #ffd800;
+$lavender: #b590f9;
+$purple: #5a2ca0;
 
-$header-color: $white;
+$gradient-dark: linear-gradient(-45deg, #0f2027, #1b3b5c, #254a6d, #2c5364, #1f1c2c);
+$gradient-light: linear-gradient(-45deg, #f8e42e, #e73c7e, #23a6d5, $yellow);
 
-$button-color: #afc4dd;
-$button-text-color: black;
-$button-color-hover: #6e99c4;
+/* Themes */
+$themes: (
+	dark: (
+		text-color: $white,
+		text-color-reverse: $black,
+		background-color: $black,
+		header-color: $white,
 
-$nav-bar-color: #afc4dd;
-$nav-bar-color-hover: #6e99c4;
-$nav-bar-text-color: black;
+		button-color: $lightblue,
+		button-text-color: $black,
+		button-color-hover: $blue,
 
-$contact-link-color: #afc4dd;
-$contact-link-color-hover: yellow;
-$contact-link-color-visted: #b590f9;
+		nav-bar-color: $lightblue,
+		nav-bar-color-hover: $blue,
+		nav-bar-text-color: $black,
 
-// // Pan Scheme
-// Pink/Magenta	HEX = #FF218C	RGB = 255, 33, 140
-// Yellow	HEX = #FFD800	RGB = 255, 216, 0
-// Blue/Cyan	HEX = #21B1FF	RGB = 33, 177, 255
+		contact-link-color: $lightblue,
+		contact-link-color-hover: $yellow,
+		contact-link-color-visited: $lavender,
+		main-gradient: $gradient-dark,
+		text-shadow-color: $black,
+	),
+	light: (
+		text-color: $white,
+		text-color-reverse: $white,
+		background-color: $white,
+		header-color: $white,
+
+		button-color: $blue,
+		button-text-color: $white,
+		button-color-hover: $lightblue,
+
+		nav-bar-color: $blue,
+		nav-bar-color-hover: $lightblue,
+		nav-bar-text-color: $white,
+
+		contact-link-color: $blue,
+		contact-link-color-hover: $lightblue,
+		contact-link-color-visited: $purple,
+		main-gradient: $gradient-light,
+		text-shadow-color: $black,
+	),
+);
+
+/* Helper mixin to output CSS vars for each theme */
+@mixin theme-vars($mode) {
+	@each $key, $value in map.get($themes, $mode) {
+		--#{$key}: #{$value};
+	}
+}
+
+:root[data-theme='Dark'] {
+	@include theme-vars(dark);
+}
+
+:root[data-theme='Light'] {
+	@include theme-vars(light);
+}

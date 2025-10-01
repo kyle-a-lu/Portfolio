@@ -1,4 +1,4 @@
-import { ICONS_DATA } from './icons_data.js';
+import { ICONS_DATA } from '../data/icons_data.js';
 import { motion } from 'motion/react';
 
 export default function Icons() {

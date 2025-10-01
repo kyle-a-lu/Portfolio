@@ -7,7 +7,7 @@ body {
 	font-family: 'Varela Round', sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	color: $text-color;
+	color: var(--text-color);
 }
 
 h1,
@@ -16,8 +16,8 @@ h3,
 h4,
 h5,
 h6 {
-	color: $header-color;
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	color: var(--header-color);
+	text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
 	margin: 0.25rem 0;
 }
 
@@ -41,29 +41,36 @@ h6 {
 }
 
 a {
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-	color: $contact-link-color;
+	text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
+	color: var(--contact-link-color);
 }
 nav {
 	font-size: clamp(0.75rem, 4vw, 3rem);
 	li {
-		text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
 		a {
 			font-weight: bold;
-			color: $nav-bar-text-color;
+			color: var(--nav-bar-text-color);
 		}
 	}
 }
 
 .icon-tooltip {
 	font-weight: bold;
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
 }
 
 footer {
 	font-size: 0.75rem;
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
 }
 .timeline {
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow: -1px -1px 0 var(--text-shadow-color), 1px -1px 0 var(--text-shadow-color), -1px 1px 0 var(--text-shadow-color), 1px 1px 0 var(--text-shadow-color);
+	a {
+		color: var(--header-color);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

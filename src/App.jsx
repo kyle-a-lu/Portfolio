@@ -1,53 +1,68 @@
-import Header from './components/Header/Header';
-import ContactMe from './components/ContactMe/ContactMe';
-import Navigation from './components/Navigation/Navigation';
-import Avatar from './components/Avatar/Avatar';
-import AboutMe from './components/AboutMe/AboutMe';
-import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
+import { useRef, useState } from 'react';
+import Header from './components/Header';
+import HeaderLinks from './components/HeaderLinks';
+import HeaderUtilities from './components/HeaderUtilities';
+import ContactButton from './components/ContactButton';
+import ThemeButton from './components/ThemeButton';
+import Navigation from './components/Navigation';
+import ContactForm from './components/ContactForm';
+import Avatar from './components/Avatar';
+import About from './components/About';
+import Timeline from './components/Timeline';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Section from './components/Section';
+import Footer from './components/Footer';
+import Icons from './components/Icons';
+import VolumeButton from './components/Sound/VolumeButton/VolumeButton';
 import './scss/main.scss';
-import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
-import Icons from './components/Icons/Icons';
 
 function App() {
 	const [currentContent, setCurrentContent] = useState('Home');
+	const modalRef = useRef(null);
 
-	function handleSwitchContent(content) {
-		if (content !== currentContent) {
-			setCurrentContent(content);
-		}
-	}
+	const showContactFormModal = () => modalRef.current?.showModal();
+	const closeContactFormModal = () => modalRef.current?.close();
+
+	const handleSwitchContent = (content) => {
+		if (content !== currentContent) setCurrentContent(content);
+	};
 
 	return (
 		<>
-			<Header
-				returnHome={() => handleSwitchContent('Home')}
-				openContactMe={() => handleSwitchContent('Contact')}
-			/>
+			<Header returnHome={() => handleSwitchContent('Home')}>
+				<HeaderLinks>
+					<ContactButton openContactFormModal={showContactFormModal} />
+					<ContactForm modalRef={modalRef} />
+				</HeaderLinks>
+				<HeaderUtilities>
+					<ThemeButton />
+					<VolumeButton />
+				</HeaderUtilities>
+			</Header>
+
 			<Navigation
 				openContent={handleSwitchContent}
 				activeContent={currentContent}
-			></Navigation>
+			/>
+
 			<main>
 				<AnimatePresence mode='wait'>
-					{currentContent === 'Contact' && <ContactMe key='Contact' />}
-					{currentContent === 'Home' && (
-						<div className='avatar-container'>
-							<Avatar
-								key='Home'
-								activeContent={currentContent}
-							/>
-							<Icons key='icons' />
-						</div>
-					)}
-					{currentContent === 'About' && <AboutMe key='About' />}
-					{currentContent === 'Experience' && <Experience key='Experience' />}
-					{currentContent === 'Projects' && <Projects key='Projects' />}
-					{currentContent === 'Skills' && <Skills key='Skills' />}
+					<Section
+						key={currentContent}
+						sectionName={currentContent}
+					>
+						{currentContent === 'Home' && <Avatar key='Home' />}
+						{currentContent === 'Home' && <Icons key='icons' />}
+						{currentContent === 'About' && <About key='About' />}
+						{currentContent === 'About' && <Timeline key='Timeline' />}
+						{currentContent === 'Projects' && <Projects key='Projects' />}
+						{currentContent === 'Skills' && <Skills key='Skills' />}
+					</Section>
 				</AnimatePresence>
 			</main>
+			<Footer />
 		</>
 	);
 }

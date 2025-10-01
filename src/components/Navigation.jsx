@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 
-const NAV_ITEMS = ['Home', 'About', 'Experience', 'Skills', 'Projects'];
+const NAV_ITEMS = ['Home', 'About', 'Skills', 'Projects'];
 
 export default function Navigation({ openContent, activeContent }) {
 	return (
@@ -33,5 +33,3 @@ export default function Navigation({ openContent, activeContent }) {
 		</nav>
 	);
 }
-
-//Add active scale to nav current state
