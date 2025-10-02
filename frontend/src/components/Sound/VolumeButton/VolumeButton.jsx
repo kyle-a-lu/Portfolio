@@ -1,29 +1,17 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
+import { useVolume } from '../../../context/VolumeContext';
 
 export default function VolumeButton() {
-	const [volumeToggle, setVolumeToggle] = useState(true);
+	const { isMuted, toggleMute } = useVolume();
 
-	let soundWaveOneX = -10;
-	let soundWaveTwoX = -20;
-	let soundWaveOneScale = 0;
-	let soundWaveTwoScale = 0;
-
-	function handleToggleVolume() {
-		const newVolumeToggle = !volumeToggle;
-		setVolumeToggle(newVolumeToggle);
-	}
-
-	if (volumeToggle) {
-		soundWaveOneX = 0;
-		soundWaveTwoX = 0;
-		soundWaveOneScale = 1;
-		soundWaveTwoScale = 1;
-	}
+	const soundWaveOneX = isMuted ? -10 : 0;
+	const soundWaveTwoX = isMuted ? -20 : 0;
+	const soundWaveOneScale = isMuted ? 0 : 1;
+	const soundWaveTwoScale = isMuted ? 0 : 1;
 
 	return (
 		<button
-			onClick={handleToggleVolume}
+			onClick={toggleMute}
 			className='volume-container'
 		>
 			<img

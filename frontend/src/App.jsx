@@ -1,4 +1,3 @@
-import { useRef, useState } from 'react';
 import Header from './components/Header';
 import HeaderLinks from './components/HeaderLinks';
 import HeaderUtilities from './components/HeaderUtilities';
@@ -15,8 +14,10 @@ import Section from './components/Section';
 import Footer from './components/Footer';
 import Icons from './components/Icons';
 import VolumeButton from './components/Sound/VolumeButton/VolumeButton';
-import './scss/main.scss';
+import { useState } from 'react';
+import { VolumeProvider } from './context/VolumeContext';
 import { AnimatePresence } from 'motion/react';
+import './scss/main.scss';
 
 function App() {
 	const [currentContent, setCurrentContent] = useState('Home');
@@ -27,7 +28,7 @@ function App() {
 	};
 
 	return (
-		<>
+		<VolumeProvider>
 			<Header returnHome={() => handleSwitchContent('Home')}>
 				<HeaderLinks>
 					<ContactButton openContactFormModal={() => setIsContactOpen(true)} />
@@ -63,7 +64,7 @@ function App() {
 				</AnimatePresence>
 			</main>
 			<Footer />
-		</>
+		</VolumeProvider>
 	);
 }
 

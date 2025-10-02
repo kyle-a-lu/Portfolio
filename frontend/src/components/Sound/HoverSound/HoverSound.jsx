@@ -1,37 +1,36 @@
 import React from 'react';
-import clickSoundFile from '../../assets/audio/hover.wav';
-import hoverSoundFile from '../../assets/audio/select.wav';
+import clickSoundFile from '../../../assets/audio/hover.wav';
+import hoverSoundFile from '../../../assets/audio/select.wav';
+import { useVolume } from '../../../context/VolumeContext';
 
-export default function HoverSound({ children, muted }) {
+export default function HoverSound({ children }) {
+	const { isMuted } = useVolume();
+
 	const hoverSound = React.useMemo(() => new Audio(hoverSoundFile), []);
 	const clickSound = React.useMemo(() => new Audio(clickSoundFile), []);
 
-	function handleHoverSound() {
-		if (!muted) {
-			hoverSound.currentTime = 0;
-			hoverSound.play();
-		}
-	}
+	const handleHoverSound = () => {
+		if (isMuted) return;
+		hoverSound.currentTime = 0;
+		hoverSound.volume = 0.2;
+		hoverSound.play();
+	};
 
-	function handleClickSound() {
-		if (!muted) {
-			clickSound.currentTime = 0;
-			clickSound.play();
-		}
-	}
+	const handleClickSound = () => {
+		if (isMuted) return;
+		clickSound.currentTime = 0;
+		clickSound.volume = 0.2;
+		clickSound.play();
+	};
 
 	return React.cloneElement(children, {
-		onMouseEnter: (e) => {
+		onMouseEnter: (event) => {
 			handleHoverSound();
-			if (children.props.onMouseEnter) {
-				children.props.onMouseEnter(e);
-			}
+			children.props.onMouseEnter?.(event);
 		},
-		onClick: (e) => {
+		onClick: (event) => {
 			handleClickSound();
-			if (children.props.onClick) {
-				children.props.onClick(e);
-			}
+			children.props.onClick?.(event);
 		},
 	});
 }
