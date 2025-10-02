@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { createPortal } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function ContactForm({ isOpen, onClose }) {
 	const modalContainerReference = useRef(null);
@@ -45,6 +45,38 @@ export default function ContactForm({ isOpen, onClose }) {
 			onClose();
 		}
 	};
+	const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+	const [status, setStatus] = useState('');
+
+	const handleInputChange = (event) => {
+		setFormData({
+			...formData,
+			[event.target.name]: event.target.value,
+		});
+	};
+
+	const handleFormSubmit = async (event) => {
+		event.preventDefault();
+
+		const formPayload = {
+			name: event.target.name.value,
+			email: event.target.email.value,
+			message: event.target.message.value,
+		};
+
+		try {
+			const response = await fetch('/send', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formPayload),
+			});
+
+			const responseData = await response.json();
+			console.log(responseData);
+		} catch (error) {
+			console.error('Error submitting form:', error);
+		}
+	};
 
 	return createPortal(
 		<AnimatePresence>
@@ -74,15 +106,18 @@ export default function ContactForm({ isOpen, onClose }) {
 							id='contact-form-header'
 							className='contact-form-header'
 						>
-							Contact Us
+							Contact Me
 						</h2>
 						<p
 							id='contact-form-subtitle'
 							className='contact-form-subtitle'
 						>
-							Fill out the form below and we will get back to you shortly.
+							Fill out the form below and I will get back to you shortly.
 						</p>
-						<form autoComplete='on'>
+						<form
+							autoComplete='on'
+							onSubmit={handleFormSubmit}
+						>
 							<div className='contact-form-input'>
 								<label htmlFor='name'>Name *</label>
 								<input
@@ -92,6 +127,8 @@ export default function ContactForm({ isOpen, onClose }) {
 									ref={firstInputFieldReference}
 									autoComplete='name'
 									required
+									value={formData.name}
+									onChange={handleInputChange}
 								/>
 							</div>
 							<div className='contact-form-input'>
@@ -102,6 +139,8 @@ export default function ContactForm({ isOpen, onClose }) {
 									name='email'
 									autoComplete='email'
 									required
+									value={formData.email}
+									onChange={handleInputChange}
 								/>
 							</div>
 							<div className='contact-form-input'>
@@ -111,7 +150,9 @@ export default function ContactForm({ isOpen, onClose }) {
 									name='message'
 									autoComplete='off'
 									required
-								></textarea>
+									value={formData.message}
+									onChange={handleInputChange}
+								/>
 							</div>
 							<menu>
 								<button type='submit'>Send</button>
@@ -123,6 +164,7 @@ export default function ContactForm({ isOpen, onClose }) {
 									Close
 								</button>
 							</menu>
+							<p>{status}</p>
 						</form>
 					</motion.div>
 				</motion.div>
