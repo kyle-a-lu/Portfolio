@@ -41,20 +41,20 @@ A portfolio built with **React** and **Node.js**, featuring a contact form power
 
 ### Frontend
 
-# Navigate to backend folder
+#### Navigate to backend folder
 cd frontend
-# Install dependencies
+#### Install dependencies
 npm install
 # Start backend server
 npm run dev
 
 ### Backend
 
-# Navigate to backend folder
+#### Navigate to backend folder
 cd backend
-# Install backend dependencies
+#### Install backend dependencies
 npm install
-# Start backend server
+#### Start backend server
 npm start
 
 ### Running Both in Development
